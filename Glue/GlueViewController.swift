@@ -16,3 +16,14 @@ class GlueViewController: NSViewController {
     }
     
 }
+
+extension GlueViewController {
+    static func freshController() -> GlueViewController {
+        let storyboard = NSStoryboard(name: "Main", bundle: nil)
+        let identifier = NSStoryboard.SceneIdentifier("GlueViewController")
+        guard let viewcontroller = storyboard.instantiateController(withIdentifier: identifier) as? GlueViewController else {
+            fatalError("Why cant i find GlueViewController? - Check Main.storyboard")
+        }
+        return viewcontroller
+    }
+}

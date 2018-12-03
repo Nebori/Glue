@@ -8,10 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		954B562621B5014200BF56E1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954B562521B5014200BF56E1 /* AppDelegate.swift */; };
-		954B562821B5014200BF56E1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954B562721B5014200BF56E1 /* ViewController.swift */; };
 		954B562A21B5014500BF56E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 954B562921B5014500BF56E1 /* Assets.xcassets */; };
 		954B562D21B5014500BF56E1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 954B562B21B5014500BF56E1 /* Main.storyboard */; };
 		954B563921B5014500BF56E1 /* GlueTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954B563821B5014500BF56E1 /* GlueTests.swift */; };
+		954B564421B5102500BF56E1 /* GlueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954B564321B5102500BF56E1 /* GlueViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,7 +27,6 @@
 /* Begin PBXFileReference section */
 		954B562221B5014200BF56E1 /* Glue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Glue.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		954B562521B5014200BF56E1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		954B562721B5014200BF56E1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		954B562921B5014500BF56E1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		954B562C21B5014500BF56E1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		954B562E21B5014500BF56E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -35,6 +34,7 @@
 		954B563421B5014500BF56E1 /* GlueTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GlueTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		954B563821B5014500BF56E1 /* GlueTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlueTests.swift; sourceTree = "<group>"; };
 		954B563A21B5014500BF56E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		954B564321B5102500BF56E1 /* GlueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlueViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,11 +77,11 @@
 			isa = PBXGroup;
 			children = (
 				954B562521B5014200BF56E1 /* AppDelegate.swift */,
-				954B562721B5014200BF56E1 /* ViewController.swift */,
 				954B562921B5014500BF56E1 /* Assets.xcassets */,
 				954B562B21B5014500BF56E1 /* Main.storyboard */,
 				954B562E21B5014500BF56E1 /* Info.plist */,
 				954B562F21B5014500BF56E1 /* Glue.entitlements */,
+				954B564321B5102500BF56E1 /* GlueViewController.swift */,
 			);
 			path = Glue;
 			sourceTree = "<group>";
@@ -145,6 +145,11 @@
 				TargetAttributes = {
 					954B562121B5014200BF56E1 = {
 						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 0;
+							};
+						};
 					};
 					954B563321B5014500BF56E1 = {
 						CreatedOnToolsVersion = 10.1;
@@ -195,8 +200,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				954B562821B5014200BF56E1 /* ViewController.swift in Sources */,
 				954B562621B5014200BF56E1 /* AppDelegate.swift in Sources */,
+				954B564421B5102500BF56E1 /* GlueViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -349,7 +354,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = Glue/Glue.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = HR25439TCX;
@@ -358,6 +362,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				PRODUCT_BUNDLE_IDENTIFIER = net.vivans.macos.Glue;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -368,7 +373,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = Glue/Glue.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = HR25439TCX;
@@ -377,6 +381,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				PRODUCT_BUNDLE_IDENTIFIER = net.vivans.macos.Glue;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
