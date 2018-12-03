@@ -1,0 +1,461 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		954B562621B5014200BF56E1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954B562521B5014200BF56E1 /* AppDelegate.swift */; };
+		954B562821B5014200BF56E1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954B562721B5014200BF56E1 /* ViewController.swift */; };
+		954B562A21B5014500BF56E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 954B562921B5014500BF56E1 /* Assets.xcassets */; };
+		954B562D21B5014500BF56E1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 954B562B21B5014500BF56E1 /* Main.storyboard */; };
+		954B563921B5014500BF56E1 /* GlueTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954B563821B5014500BF56E1 /* GlueTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		954B563521B5014500BF56E1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 954B561A21B5014200BF56E1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 954B562121B5014200BF56E1;
+			remoteInfo = Glue;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		954B562221B5014200BF56E1 /* Glue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Glue.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		954B562521B5014200BF56E1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		954B562721B5014200BF56E1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		954B562921B5014500BF56E1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		954B562C21B5014500BF56E1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		954B562E21B5014500BF56E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		954B562F21B5014500BF56E1 /* Glue.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Glue.entitlements; sourceTree = "<group>"; };
+		954B563421B5014500BF56E1 /* GlueTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GlueTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		954B563821B5014500BF56E1 /* GlueTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlueTests.swift; sourceTree = "<group>"; };
+		954B563A21B5014500BF56E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		954B561F21B5014200BF56E1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		954B563121B5014500BF56E1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		954B561921B5014200BF56E1 = {
+			isa = PBXGroup;
+			children = (
+				954B562421B5014200BF56E1 /* Glue */,
+				954B563721B5014500BF56E1 /* GlueTests */,
+				954B562321B5014200BF56E1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		954B562321B5014200BF56E1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				954B562221B5014200BF56E1 /* Glue.app */,
+				954B563421B5014500BF56E1 /* GlueTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		954B562421B5014200BF56E1 /* Glue */ = {
+			isa = PBXGroup;
+			children = (
+				954B562521B5014200BF56E1 /* AppDelegate.swift */,
+				954B562721B5014200BF56E1 /* ViewController.swift */,
+				954B562921B5014500BF56E1 /* Assets.xcassets */,
+				954B562B21B5014500BF56E1 /* Main.storyboard */,
+				954B562E21B5014500BF56E1 /* Info.plist */,
+				954B562F21B5014500BF56E1 /* Glue.entitlements */,
+			);
+			path = Glue;
+			sourceTree = "<group>";
+		};
+		954B563721B5014500BF56E1 /* GlueTests */ = {
+			isa = PBXGroup;
+			children = (
+				954B563821B5014500BF56E1 /* GlueTests.swift */,
+				954B563A21B5014500BF56E1 /* Info.plist */,
+			);
+			path = GlueTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		954B562121B5014200BF56E1 /* Glue */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 954B563D21B5014500BF56E1 /* Build configuration list for PBXNativeTarget "Glue" */;
+			buildPhases = (
+				954B561E21B5014200BF56E1 /* Sources */,
+				954B561F21B5014200BF56E1 /* Frameworks */,
+				954B562021B5014200BF56E1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Glue;
+			productName = Glue;
+			productReference = 954B562221B5014200BF56E1 /* Glue.app */;
+			productType = "com.apple.product-type.application";
+		};
+		954B563321B5014500BF56E1 /* GlueTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 954B564021B5014500BF56E1 /* Build configuration list for PBXNativeTarget "GlueTests" */;
+			buildPhases = (
+				954B563021B5014500BF56E1 /* Sources */,
+				954B563121B5014500BF56E1 /* Frameworks */,
+				954B563221B5014500BF56E1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				954B563621B5014500BF56E1 /* PBXTargetDependency */,
+			);
+			name = GlueTests;
+			productName = GlueTests;
+			productReference = 954B563421B5014500BF56E1 /* GlueTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		954B561A21B5014200BF56E1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = nebori92;
+				TargetAttributes = {
+					954B562121B5014200BF56E1 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					954B563321B5014500BF56E1 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 954B562121B5014200BF56E1;
+					};
+				};
+			};
+			buildConfigurationList = 954B561D21B5014200BF56E1 /* Build configuration list for PBXProject "Glue" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 954B561921B5014200BF56E1;
+			productRefGroup = 954B562321B5014200BF56E1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				954B562121B5014200BF56E1 /* Glue */,
+				954B563321B5014500BF56E1 /* GlueTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		954B562021B5014200BF56E1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				954B562A21B5014500BF56E1 /* Assets.xcassets in Resources */,
+				954B562D21B5014500BF56E1 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		954B563221B5014500BF56E1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		954B561E21B5014200BF56E1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				954B562821B5014200BF56E1 /* ViewController.swift in Sources */,
+				954B562621B5014200BF56E1 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		954B563021B5014500BF56E1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				954B563921B5014500BF56E1 /* GlueTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		954B563621B5014500BF56E1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 954B562121B5014200BF56E1 /* Glue */;
+			targetProxy = 954B563521B5014500BF56E1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		954B562B21B5014500BF56E1 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				954B562C21B5014500BF56E1 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		954B563B21B5014500BF56E1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		954B563C21B5014500BF56E1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		954B563E21B5014500BF56E1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Glue/Glue.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = HR25439TCX;
+				INFOPLIST_FILE = Glue/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = net.vivans.macos.Glue;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+			};
+			name = Debug;
+		};
+		954B563F21B5014500BF56E1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Glue/Glue.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = HR25439TCX;
+				INFOPLIST_FILE = Glue/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = net.vivans.macos.Glue;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+			};
+			name = Release;
+		};
+		954B564121B5014500BF56E1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = HR25439TCX;
+				INFOPLIST_FILE = GlueTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = net.vivans.macos.GlueTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Glue.app/Contents/MacOS/Glue";
+			};
+			name = Debug;
+		};
+		954B564221B5014500BF56E1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = HR25439TCX;
+				INFOPLIST_FILE = GlueTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = net.vivans.macos.GlueTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Glue.app/Contents/MacOS/Glue";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		954B561D21B5014200BF56E1 /* Build configuration list for PBXProject "Glue" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				954B563B21B5014500BF56E1 /* Debug */,
+				954B563C21B5014500BF56E1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		954B563D21B5014500BF56E1 /* Build configuration list for PBXNativeTarget "Glue" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				954B563E21B5014500BF56E1 /* Debug */,
+				954B563F21B5014500BF56E1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		954B564021B5014500BF56E1 /* Build configuration list for PBXNativeTarget "GlueTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				954B564121B5014500BF56E1 /* Debug */,
+				954B564221B5014500BF56E1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 954B561A21B5014200BF56E1 /* Project object */;
+}
