@@ -93,5 +93,6 @@ class GlueConfigurationManager: CodableReadWritable, Singleton {
         case .command:
             config.command = !config.command
         }
+        save(codableObj: config)
     }
 }
