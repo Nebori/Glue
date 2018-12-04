@@ -19,6 +19,8 @@
 		954B565F21B6636300BF56E1 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 954B566121B6636300BF56E1 /* Localizable.strings */; };
 		954B566521B6673400BF56E1 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954B566421B6673400BF56E1 /* StringExtension.swift */; };
 		954B566721B669DD00BF56E1 /* GlueConfigurationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954B566621B669DD00BF56E1 /* GlueConfigurationManager.swift */; };
+		954B566B21B6775D00BF56E1 /* AppWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954B566A21B6775D00BF56E1 /* AppWindow.swift */; };
+		954B566D21B677B600BF56E1 /* FrameStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954B566C21B677B600BF56E1 /* FrameStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,8 @@
 		954B566321B6637F00BF56E1 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Localizable.strings; sourceTree = "<group>"; };
 		954B566421B6673400BF56E1 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		954B566621B669DD00BF56E1 /* GlueConfigurationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlueConfigurationManager.swift; sourceTree = "<group>"; };
+		954B566A21B6775D00BF56E1 /* AppWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppWindow.swift; sourceTree = "<group>"; };
+		954B566C21B677B600BF56E1 /* FrameStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +99,7 @@
 		954B562421B5014200BF56E1 /* Glue */ = {
 			isa = PBXGroup;
 			children = (
+				954B566921B676DC00BF56E1 /* 3rdParty */,
 				954B565C21B6631C00BF56E1 /* Localize */,
 				954B564821B5243100BF56E1 /* Manager */,
 				954B564721B5242800BF56E1 /* Model */,
@@ -160,6 +165,15 @@
 				954B566421B6673400BF56E1 /* StringExtension.swift */,
 			);
 			path = Localize;
+			sourceTree = "<group>";
+		};
+		954B566921B676DC00BF56E1 /* 3rdParty */ = {
+			isa = PBXGroup;
+			children = (
+				954B566A21B6775D00BF56E1 /* AppWindow.swift */,
+				954B566C21B677B600BF56E1 /* FrameStore.swift */,
+			);
+			path = 3rdParty;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -270,9 +284,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				954B564C21B5261E00BF56E1 /* CodableReadWritable.swift in Sources */,
+				954B566B21B6775D00BF56E1 /* AppWindow.swift in Sources */,
 				954B566721B669DD00BF56E1 /* GlueConfigurationManager.swift in Sources */,
 				954B566521B6673400BF56E1 /* StringExtension.swift in Sources */,
 				954B565921B64D0900BF56E1 /* Singleton.swift in Sources */,
+				954B566D21B677B600BF56E1 /* FrameStore.swift in Sources */,
 				954B565721B6408900BF56E1 /* KeyboardEventManager.swift in Sources */,
 				954B564A21B525FE00BF56E1 /* GlueConfiguration.swift in Sources */,
 				954B562621B5014200BF56E1 /* AppDelegate.swift in Sources */,

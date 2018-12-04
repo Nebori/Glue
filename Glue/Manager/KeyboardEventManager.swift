@@ -23,7 +23,8 @@ class KeyboardEventManager {
     }
     
     private func classification(_ event: NSEvent) {
-        guard let config = GlueConfigurationManager.sharedInstance else {
+        guard let config = GlueConfigurationManager.sharedInstance,
+            let app = AppWindow.frontmost() else {
             return
         }
         let (flags, numFlags) = config.getConfigOption()
@@ -35,15 +36,19 @@ class KeyboardEventManager {
         case flags where event.keyCode == up,
              numFlags where event.keyCode == up:
             print("up")
+            app.attachFillTop()
         case flags where event.keyCode == down,
              numFlags where event.keyCode == down:
             print("down")
+            app.attachFillBottom()
         case flags where event.keyCode == right,
              numFlags where event.keyCode == right:
             print("right")
+            app.attachFillRight()
         case flags where event.keyCode == left,
              numFlags where event.keyCode == left:
             print("left")
+            app.attachFillLeft()
         default:
             break
         }
