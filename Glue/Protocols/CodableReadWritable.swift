@@ -27,8 +27,8 @@ extension CodableReadWritable {
             return decodeObj as T
         } catch {
             print("CodableReadWritable read fail")
+            throw CodableReadWritableError.notFoundPlist
         }
-        return nil
     }
     
     func save<T: Codable> (codableObj: T) {

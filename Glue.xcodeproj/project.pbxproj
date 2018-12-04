@@ -16,6 +16,9 @@
 		954B564C21B5261E00BF56E1 /* CodableReadWritable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954B564B21B5261E00BF56E1 /* CodableReadWritable.swift */; };
 		954B565721B6408900BF56E1 /* KeyboardEventManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954B565621B6408900BF56E1 /* KeyboardEventManager.swift */; };
 		954B565921B64D0900BF56E1 /* Singleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954B565821B64D0900BF56E1 /* Singleton.swift */; };
+		954B565F21B6636300BF56E1 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 954B566121B6636300BF56E1 /* Localizable.strings */; };
+		954B566521B6673400BF56E1 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954B566421B6673400BF56E1 /* StringExtension.swift */; };
+		954B566721B669DD00BF56E1 /* GlueConfigurationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954B566621B669DD00BF56E1 /* GlueConfigurationManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +48,11 @@
 		954B565121B61E1600BF56E1 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = System/Library/Frameworks/Carbon.framework; sourceTree = SDKROOT; };
 		954B565621B6408900BF56E1 /* KeyboardEventManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardEventManager.swift; sourceTree = "<group>"; };
 		954B565821B64D0900BF56E1 /* Singleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Singleton.swift; sourceTree = "<group>"; };
+		954B566021B6636300BF56E1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		954B566221B6637F00BF56E1 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Main.strings; sourceTree = "<group>"; };
+		954B566321B6637F00BF56E1 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Localizable.strings; sourceTree = "<group>"; };
+		954B566421B6673400BF56E1 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		954B566621B669DD00BF56E1 /* GlueConfigurationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlueConfigurationManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +95,7 @@
 		954B562421B5014200BF56E1 /* Glue */ = {
 			isa = PBXGroup;
 			children = (
+				954B565C21B6631C00BF56E1 /* Localize */,
 				954B564821B5243100BF56E1 /* Manager */,
 				954B564721B5242800BF56E1 /* Model */,
 				954B564621B5241D00BF56E1 /* Protocols */,
@@ -130,6 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				954B565621B6408900BF56E1 /* KeyboardEventManager.swift */,
+				954B566621B669DD00BF56E1 /* GlueConfigurationManager.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -141,6 +151,15 @@
 				954B564E21B617B900BF56E1 /* CoreGraphics.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		954B565C21B6631C00BF56E1 /* Localize */ = {
+			isa = PBXGroup;
+			children = (
+				954B566121B6636300BF56E1 /* Localizable.strings */,
+				954B566421B6673400BF56E1 /* StringExtension.swift */,
+			);
+			path = Localize;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -212,6 +231,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ko,
 			);
 			mainGroup = 954B561921B5014200BF56E1;
 			productRefGroup = 954B562321B5014200BF56E1 /* Products */;
@@ -230,6 +250,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				954B562A21B5014500BF56E1 /* Assets.xcassets in Resources */,
+				954B565F21B6636300BF56E1 /* Localizable.strings in Resources */,
 				954B562D21B5014500BF56E1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -249,6 +270,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				954B564C21B5261E00BF56E1 /* CodableReadWritable.swift in Sources */,
+				954B566721B669DD00BF56E1 /* GlueConfigurationManager.swift in Sources */,
+				954B566521B6673400BF56E1 /* StringExtension.swift in Sources */,
 				954B565921B64D0900BF56E1 /* Singleton.swift in Sources */,
 				954B565721B6408900BF56E1 /* KeyboardEventManager.swift in Sources */,
 				954B564A21B525FE00BF56E1 /* GlueConfiguration.swift in Sources */,
@@ -280,8 +303,18 @@
 			isa = PBXVariantGroup;
 			children = (
 				954B562C21B5014500BF56E1 /* Base */,
+				954B566221B6637F00BF56E1 /* ko */,
 			);
 			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		954B566121B6636300BF56E1 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				954B566021B6636300BF56E1 /* en */,
+				954B566321B6637F00BF56E1 /* ko */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -291,6 +324,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -352,6 +386,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -415,7 +450,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
-				PRODUCT_BUNDLE_IDENTIFIER = net.vivans.macos.Glue;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nebori92.macos.Glue;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 			};
@@ -434,7 +469,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
-				PRODUCT_BUNDLE_IDENTIFIER = net.vivans.macos.Glue;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nebori92.macos.Glue;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 			};

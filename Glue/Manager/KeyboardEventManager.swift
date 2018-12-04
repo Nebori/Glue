@@ -23,7 +23,7 @@ class KeyboardEventManager {
     }
     
     private func classification(_ event: NSEvent) {
-        guard let config = GlueConfiguration.sharedInstance else {
+        guard let config = GlueConfigurationManager.sharedInstance else {
             return
         }
         let (flags, numFlags) = config.getConfigOption()

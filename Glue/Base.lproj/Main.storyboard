@@ -736,6 +736,9 @@
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="controlButtonAction:" target="XfG-lQ-9wD" id="Vzc-QG-EKc"/>
+                                </connections>
                             </button>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="M8C-Nj-1MO">
                                 <rect key="frame" x="173" y="129" width="135" height="32"/>
@@ -743,6 +746,9 @@
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="optionButtonAction:" target="XfG-lQ-9wD" id="6g5-wm-3QB"/>
+                                </connections>
                             </button>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="VAI-Mq-ri7">
                                 <rect key="frame" x="304" y="129" width="135" height="32"/>
@@ -750,6 +756,9 @@
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="commandButtonAction:" target="XfG-lQ-9wD" id="pD5-Fi-vkC"/>
+                                </connections>
                             </button>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="o8P-RA-gYc">
                                 <rect key="frame" x="18" y="30" width="444" height="24"/>
@@ -783,6 +792,17 @@
                             <constraint firstItem="M8C-Nj-1MO" firstAttribute="centerX" secondItem="zjb-G3-pGq" secondAttribute="centerX" id="zAL-9k-YCD"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="commandButton" destination="VAI-Mq-ri7" id="1xK-Vs-IOO"/>
+                        <outlet property="commandLabel" destination="MYE-K2-zmb" id="8gj-Pr-XV5"/>
+                        <outlet property="controlButton" destination="z3g-f4-COf" id="DbV-Wi-EeE"/>
+                        <outlet property="controlLabel" destination="mM6-ud-QDk" id="Tvj-f4-hO5"/>
+                        <outlet property="optionButton" destination="M8C-Nj-1MO" id="STY-gb-Tht"/>
+                        <outlet property="optionLabel" destination="zjb-G3-pGq" id="qIt-hv-ayA"/>
+                        <outlet property="titleLabel" destination="O80-gY-qWE" id="cN7-r5-vkb"/>
+                        <outlet property="usageLabel" destination="o8P-RA-gYc" id="2VU-Rh-bEj"/>
+                        <outlet property="usageTitleLabel" destination="v7N-4b-i1T" id="fTq-eI-XMa"/>
+                    </connections>
                 </viewController>
             </objects>
             <point key="canvasLocation" x="75" y="238"/>
