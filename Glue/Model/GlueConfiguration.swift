@@ -13,7 +13,8 @@ struct GlueConfig: Codable {
     var option: Bool
     var command: Bool
     init() {
-        control = true
+//        control = true
+        control = false
         option = true
         command = true
     }
@@ -36,5 +37,25 @@ class GlueConfiguration: CodableReadWritable {
         } catch {
             
         }
+    }
+    
+    func getConfigOption() -> (NSEvent.ModifierFlags, NSEvent.ModifierFlags) {
+        var flags: NSEvent.ModifierFlags = NSEvent.ModifierFlags()
+        var numFlags: NSEvent.ModifierFlags = NSEvent.ModifierFlags()
+        if config.control {
+            flags.insert(.control)
+            numFlags.insert(.control)
+        }
+        if config.option {
+            flags.insert(.option)
+            numFlags.insert(.option)
+        }
+        if config.command {
+            flags.insert(.command)
+            numFlags.insert(.command)
+        }
+        numFlags.insert(.numericPad)
+        numFlags.insert(.function)
+        return (flags, numFlags)
     }
 }

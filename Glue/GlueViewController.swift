@@ -9,21 +9,13 @@
 import Cocoa
 
 class GlueViewController: NSViewController {
+    
+    let keyboardManager: KeyboardEventManager = KeyboardEventManager()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do view setup here.
         
-        // keyboard event handling
-        let options : NSDictionary = [kAXTrustedCheckOptionPrompt.takeRetainedValue() as NSString: true]
-        let accessibilityEnabled = AXIsProcessTrustedWithOptions(options)
-        
-        if accessibilityEnabled == false {
-            NSApplication.shared.terminate(self)
-        }
-        NSEvent.addGlobalMonitorForEvents(matching: .keyDown) { (event: NSEvent) in
-            // 이곳에서 이벤트 핸들링
-        }
     }
     
 }
