@@ -12,6 +12,8 @@
 		954B562D21B5014500BF56E1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 954B562B21B5014500BF56E1 /* Main.storyboard */; };
 		954B563921B5014500BF56E1 /* GlueTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954B563821B5014500BF56E1 /* GlueTests.swift */; };
 		954B564421B5102500BF56E1 /* GlueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954B564321B5102500BF56E1 /* GlueViewController.swift */; };
+		954B564A21B525FE00BF56E1 /* GlueConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954B564921B525FE00BF56E1 /* GlueConfiguration.swift */; };
+		954B564C21B5261E00BF56E1 /* CodableReadWritable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954B564B21B5261E00BF56E1 /* CodableReadWritable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +37,10 @@
 		954B563821B5014500BF56E1 /* GlueTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlueTests.swift; sourceTree = "<group>"; };
 		954B563A21B5014500BF56E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		954B564321B5102500BF56E1 /* GlueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlueViewController.swift; sourceTree = "<group>"; };
+		954B564921B525FE00BF56E1 /* GlueConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlueConfiguration.swift; sourceTree = "<group>"; };
+		954B564B21B5261E00BF56E1 /* CodableReadWritable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CodableReadWritable.swift; sourceTree = "<group>"; };
+		954B564E21B617B900BF56E1 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		954B565121B61E1600BF56E1 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = System/Library/Frameworks/Carbon.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +67,7 @@
 				954B562421B5014200BF56E1 /* Glue */,
 				954B563721B5014500BF56E1 /* GlueTests */,
 				954B562321B5014200BF56E1 /* Products */,
+				954B564D21B617B900BF56E1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -76,6 +83,9 @@
 		954B562421B5014200BF56E1 /* Glue */ = {
 			isa = PBXGroup;
 			children = (
+				954B564821B5243100BF56E1 /* View */,
+				954B564721B5242800BF56E1 /* Model */,
+				954B564621B5241D00BF56E1 /* Protocols */,
 				954B562521B5014200BF56E1 /* AppDelegate.swift */,
 				954B562921B5014500BF56E1 /* Assets.xcassets */,
 				954B562B21B5014500BF56E1 /* Main.storyboard */,
@@ -93,6 +103,38 @@
 				954B563A21B5014500BF56E1 /* Info.plist */,
 			);
 			path = GlueTests;
+			sourceTree = "<group>";
+		};
+		954B564621B5241D00BF56E1 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				954B564B21B5261E00BF56E1 /* CodableReadWritable.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		954B564721B5242800BF56E1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				954B564921B525FE00BF56E1 /* GlueConfiguration.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		954B564821B5243100BF56E1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		954B564D21B617B900BF56E1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				954B565121B61E1600BF56E1 /* Carbon.framework */,
+				954B564E21B617B900BF56E1 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -200,6 +242,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				954B564C21B5261E00BF56E1 /* CodableReadWritable.swift in Sources */,
+				954B564A21B525FE00BF56E1 /* GlueConfiguration.swift in Sources */,
 				954B562621B5014200BF56E1 /* AppDelegate.swift in Sources */,
 				954B564421B5102500BF56E1 /* GlueViewController.swift in Sources */,
 			);

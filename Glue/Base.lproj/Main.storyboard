@@ -679,7 +679,7 @@
                     </connections>
                 </application>
             </objects>
-            <point key="canvasLocation" x="75" y="0.0"/>
+            <point key="canvasLocation" x="75" y="6"/>
         </scene>
         <!--Glue View Controller-->
         <scene sceneID="hIz-AP-VOD">
