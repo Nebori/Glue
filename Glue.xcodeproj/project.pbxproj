@@ -15,6 +15,7 @@
 		954B564A21B525FE00BF56E1 /* GlueConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954B564921B525FE00BF56E1 /* GlueConfiguration.swift */; };
 		954B564C21B5261E00BF56E1 /* CodableReadWritable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954B564B21B5261E00BF56E1 /* CodableReadWritable.swift */; };
 		954B565721B6408900BF56E1 /* KeyboardEventManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954B565621B6408900BF56E1 /* KeyboardEventManager.swift */; };
+		954B565921B64D0900BF56E1 /* Singleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954B565821B64D0900BF56E1 /* Singleton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +44,7 @@
 		954B564E21B617B900BF56E1 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		954B565121B61E1600BF56E1 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = System/Library/Frameworks/Carbon.framework; sourceTree = SDKROOT; };
 		954B565621B6408900BF56E1 /* KeyboardEventManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardEventManager.swift; sourceTree = "<group>"; };
+		954B565821B64D0900BF56E1 /* Singleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Singleton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				954B564B21B5261E00BF56E1 /* CodableReadWritable.swift */,
+				954B565821B64D0900BF56E1 /* Singleton.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -246,6 +249,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				954B564C21B5261E00BF56E1 /* CodableReadWritable.swift in Sources */,
+				954B565921B64D0900BF56E1 /* Singleton.swift in Sources */,
 				954B565721B6408900BF56E1 /* KeyboardEventManager.swift in Sources */,
 				954B564A21B525FE00BF56E1 /* GlueConfiguration.swift in Sources */,
 				954B562621B5014200BF56E1 /* AppDelegate.swift in Sources */,

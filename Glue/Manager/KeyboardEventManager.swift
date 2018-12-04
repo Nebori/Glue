@@ -23,8 +23,9 @@ class KeyboardEventManager {
     }
     
     private func classification(_ event: NSEvent) {
-        // TODO: sharedInstance로 변경 예정
-        let config = GlueConfiguration()
+        guard let config = GlueConfiguration.sharedInstance else {
+            return
+        }
         let (flags, numFlags) = config.getConfigOption()
         
         // TODO: 구조체로 변경 예정

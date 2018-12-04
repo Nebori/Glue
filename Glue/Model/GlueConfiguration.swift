@@ -20,11 +20,26 @@ struct GlueConfig: Codable {
     }
 }
 
-class GlueConfiguration: CodableReadWritable {
+private var _glueConfiguration: GlueConfiguration!
+class GlueConfiguration: CodableReadWritable, Singleton {
     var path: URL
     var config: GlueConfig
     
-    init() {
+    class var sharedInstance: GlueConfiguration! {
+        if _glueConfiguration == nil {
+            _glueConfiguration = GlueConfiguration()
+        }
+        return _glueConfiguration
+    }
+    
+    static func setup() -> GlueConfiguration {
+        if _glueConfiguration == nil {
+            _glueConfiguration = GlueConfiguration()
+        }
+        return _glueConfiguration
+    }
+    
+    private init() {
         let searchDirectoryArray = NSSearchPathForDirectoriesInDomains(.cachesDirectory, .userDomainMask, true)
         path = URL(string: "file://" + searchDirectoryArray[0])!
         path.appendPathComponent(Bundle.main.bundleIdentifier!)
