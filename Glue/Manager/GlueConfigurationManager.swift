@@ -70,6 +70,20 @@ class GlueConfigurationManager: CodableReadWritable, Singleton {
         return (flags, numFlags)
     }
     
+    func getUsage() -> String {
+        var usageStr = String()
+        if config.control {
+            usageStr += "⌃ "
+        }
+        if config.option {
+            usageStr += "⌥ "
+        }
+        if config.command {
+            usageStr += "⌘ "
+        }
+        return usageStr
+    }
+    
     func changeConfig(_ category: GlueConfigCategory) {
         switch category {
         case .control:
@@ -77,7 +91,7 @@ class GlueConfigurationManager: CodableReadWritable, Singleton {
         case .option:
             config.option = !config.option
         case .command:
-            config.option = !config.option
+            config.command = !config.command
         }
     }
 }

@@ -9,12 +9,13 @@
 // MARK: - GlueViewController
 "Title" = "Glue";
 
-"Option01" = "control";
-"Option02" = "option";
-"Option03" = "command";
+"Option01" = "control(⌃)";
+"Option02" = "option(⌥)";
+"Option03" = "command(⌘)";
 
 "OptionButton01" = "On/Off";
 "OptionButton02" = "On/Off";
 "OptionButton03" = "On/Off";
 
 "UsageTitle" = "Usage";
+"Usage" = "⬆ or ⬇ or ⬅ or ➡";

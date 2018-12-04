@@ -27,12 +27,15 @@ class GlueViewController: NSViewController {
     // MARK: - UI Componenets Action
     @IBAction func controlButtonAction(_ sender: Any) {
         configurationManager.changeConfig(.control)
+        updateUsage()
     }
     @IBAction func optionButtonAction(_ sender: Any) {
         configurationManager.changeConfig(.option)
+        updateUsage()
     }
     @IBAction func commandButtonAction(_ sender: Any) {
         configurationManager.changeConfig(.command)
+        updateUsage()
     }
     
     override func viewDidLoad() {
@@ -40,6 +43,8 @@ class GlueViewController: NSViewController {
         // Do view setup here.
         
         initUIComponents()
+        updateUIStatus()
+        updateUsage()
     }
     
     private func initUIComponents() {
@@ -56,8 +61,13 @@ class GlueViewController: NSViewController {
         usageTitleLabel.stringValue = "UsageTitle".localized
     }
     
-    private func updateStatusImage() {
+    private func updateUIStatus() {
         
+    }
+    
+    private func updateUsage() {
+        let usageSuffix = configurationManager.getUsage()
+        usageLabel.stringValue = "\(usageSuffix) + " + "Usage".localized
     }
     
 }
