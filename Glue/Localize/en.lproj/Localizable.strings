@@ -1,0 +1,21 @@
+/* 
+  Localizable.strings
+  Glue
+
+  Created by 김인중 on 04/12/2018.
+  Copyright © 2018 nebori92. All rights reserved.
+*/
+
+// MARK: - GlueViewController
+"Title" = "Glue";
+
+"Option01" = "control(⌃)";
+"Option02" = "option(⌥)";
+"Option03" = "command(⌘)";
+
+"OptionButton01" = "On/Off";
+"OptionButton02" = "On/Off";
+"OptionButton03" = "On/Off";
+
+"UsageTitle" = "Usage";
+"Usage" = "⬆ or ⬇ or ⬅ or ➡";

@@ -22,6 +22,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             button.action = #selector(togglePopover(_:))
         }
         popover.contentViewController = GlueViewController.freshController()
+        self.showPopover(sender: nil)
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {
