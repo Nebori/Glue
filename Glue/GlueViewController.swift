@@ -27,6 +27,7 @@ extension GlueViewController {
         guard let viewcontroller = storyboard.instantiateController(withIdentifier: identifier) as? GlueViewController else {
             fatalError("Why cant i find GlueViewController? - Check Main.storyboard")
         }
+        viewcontroller.view.layer?.backgroundColor = CGColor.white
         return viewcontroller
     }
 }
