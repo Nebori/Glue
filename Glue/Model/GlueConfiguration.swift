@@ -8,13 +8,18 @@
 
 import Cocoa
 
+enum GlueConfigCategory {
+    case control
+    case option
+    case command
+}
+
 struct GlueConfig: Codable {
     var control: Bool
     var option: Bool
     var command: Bool
     init() {
-//        control = true
-        control = false
+        control = true
         option = true
         command = true
     }
@@ -50,7 +55,7 @@ class GlueConfiguration: CodableReadWritable, Singleton {
                 config = codableObj
             }
         } catch {
-            
+            save(codableObj: config)
         }
     }
     
@@ -72,5 +77,16 @@ class GlueConfiguration: CodableReadWritable, Singleton {
         numFlags.insert(.numericPad)
         numFlags.insert(.function)
         return (flags, numFlags)
+    }
+    
+    func changeConfig(_ category: GlueConfigCategory) {
+        switch category {
+        case .control:
+            config.control = !config.control
+        case .option:
+            config.option = !config.option
+        case .command:
+            config.option = !config.option
+        }
     }
 }
