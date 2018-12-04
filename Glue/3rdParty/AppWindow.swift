@@ -259,6 +259,28 @@ class AppWindow: CustomStringConvertible {
         }
     }
     
+    func attachFillTop() {
+        if let visibleFrame = screen()?.visibleFrame {
+            let x: CGFloat! = visibleFrame.origin.x
+            let y: CGFloat! = visibleFrame.maxY
+            let width: CGFloat! = visibleFrame.size.width
+            let height: CGFloat! = visibleFrame.size.height/2
+            
+            globalFrame = CGRect(x: x, y: y, width: width, height: height)
+        }
+    }
+    
+    func attachFillBottom() {
+        if let visibleFrame = screen()?.visibleFrame {
+            let x: CGFloat! = visibleFrame.origin.x
+            let y: CGFloat! = visibleFrame.origin.y
+            let width: CGFloat! = visibleFrame.size.width
+            let height: CGFloat! = visibleFrame.size.height/2
+            
+            globalFrame = CGRect(x: x, y: y, width: width, height: height)
+        }
+    }
+    
     func attachRightTop() {
         if let visibleFrame = screen()?.visibleFrame {
             let x: CGFloat! = visibleFrame.origin.x >= 0 ? visibleFrame.width/2 : visibleFrame.origin.x/2
