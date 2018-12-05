@@ -10,6 +10,9 @@ import Cocoa
 
 class GlueViewController: NSViewController {
     
+    let disableOpacity: CGFloat = 0.3
+    let ableOpacity: CGFloat = 1
+    
     let keyboardManager: KeyboardEventManager = KeyboardEventManager()
     let configurationManager: GlueConfigurationManager = GlueConfigurationManager.sharedInstance
     
@@ -74,19 +77,19 @@ class GlueViewController: NSViewController {
     private func updateUIStatus() {
         let config = configurationManager.config
         if config.control {
-            controlLabel.alphaValue = 1
+            controlLabel.alphaValue = ableOpacity
         } else {
-            controlLabel.alphaValue = 0.3
+            controlLabel.alphaValue = disableOpacity
         }
         if config.option {
-            optionLabel.alphaValue = 1
+            optionLabel.alphaValue = ableOpacity
         } else {
-            optionLabel.alphaValue = 0.3
+            optionLabel.alphaValue = disableOpacity
         }
         if config.command {
-            commandLabel.alphaValue = 1
+            commandLabel.alphaValue = ableOpacity
         } else {
-            commandLabel.alphaValue = 0.3
+            commandLabel.alphaValue = disableOpacity
         }
     }
     
