@@ -238,44 +238,76 @@ class AppWindow: CustomStringConvertible {
     }
     
     func attachFillRight() {
-        if let visibleFrame = screen()?.visibleFrame {
+        if let visibleFrame = screen()?.visibleFrame, let current = globalFrame {
             let x: CGFloat! = visibleFrame.origin.x + visibleFrame.width/2
             let y: CGFloat! = visibleFrame.origin.y
             let width: CGFloat! = visibleFrame.size.width/2
             let height: CGFloat! = visibleFrame.size.height
+            
+            if (x, y, width, height) == (current.origin.x,
+                                         current.origin.y,
+                                         current.size.width,
+                                         current.size.height) {
+                let _ = sideBySide(direction: .sideByRight)
+                return
+            }
             
             globalFrame = CGRect(x: x, y: y, width: width, height: height)
         }
     }
     
     func attachFillLeft() {
-        if let visibleFrame = screen()?.visibleFrame {
+        if let visibleFrame = screen()?.visibleFrame, let current = globalFrame {
             let x: CGFloat! = visibleFrame.origin.x
             let y: CGFloat! = visibleFrame.origin.y
             let width: CGFloat! = visibleFrame.size.width/2
             let height: CGFloat! = visibleFrame.size.height
+            
+            if (x, y, width, height) == (current.origin.x,
+                                         current.origin.y,
+                                         current.size.width,
+                                         current.size.height) {
+                let _ = sideBySide(direction: .sideByLeft)
+                return
+            }
             
             globalFrame = CGRect(x: x, y: y, width: width, height: height)
         }
     }
     
     func attachFillTop() {
-        if let visibleFrame = screen()?.visibleFrame {
+        if let visibleFrame = screen()?.visibleFrame, let current = globalFrame {
             let x: CGFloat! = visibleFrame.origin.x
             let y: CGFloat! = visibleFrame.maxY
             let width: CGFloat! = visibleFrame.size.width
             let height: CGFloat! = visibleFrame.size.height/2
+            
+            if (x, y, width, height) == (current.origin.x,
+                                         current.origin.y,
+                                         current.size.width,
+                                         current.size.height) {
+                let _ = sideBySide(direction: .sideByUp)
+                return
+            }
             
             globalFrame = CGRect(x: x, y: y, width: width, height: height)
         }
     }
     
     func attachFillBottom() {
-        if let visibleFrame = screen()?.visibleFrame {
+        if let visibleFrame = screen()?.visibleFrame, let current = globalFrame {
             let x: CGFloat! = visibleFrame.origin.x
             let y: CGFloat! = visibleFrame.origin.y
             let width: CGFloat! = visibleFrame.size.width
             let height: CGFloat! = visibleFrame.size.height/2
+            
+            if (x, y, width, height) == (current.origin.x,
+                                         current.origin.y,
+                                         current.size.width,
+                                         current.size.height) {
+                let _ = sideBySide(direction: .sideByDown)
+                return
+            }
             
             globalFrame = CGRect(x: x, y: y, width: width, height: height)
         }
