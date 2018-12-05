@@ -21,20 +21,24 @@ class GlueViewController: NSViewController {
     @IBOutlet weak var controlButton: NSButton!
     @IBOutlet weak var optionButton: NSButton!
     @IBOutlet weak var commandButton: NSButton!
+    @IBOutlet weak var warningLabel: NSTextField!
     @IBOutlet weak var usageTitleLabel: NSTextField!
     @IBOutlet weak var usageLabel: NSTextField!
     
     // MARK: - UI Componenets Action
     @IBAction func controlButtonAction(_ sender: Any) {
         configurationManager.changeConfig(.control)
+        updateWarningStatus()
         updateUsage()
     }
     @IBAction func optionButtonAction(_ sender: Any) {
         configurationManager.changeConfig(.option)
+        updateWarningStatus()
         updateUsage()
     }
     @IBAction func commandButtonAction(_ sender: Any) {
         configurationManager.changeConfig(.command)
+        updateWarningStatus()
         updateUsage()
     }
     
@@ -44,6 +48,7 @@ class GlueViewController: NSViewController {
         
         initUIComponents()
         updateUIStatus()
+        updateWarningStatus()
         updateUsage()
     }
     
@@ -56,6 +61,8 @@ class GlueViewController: NSViewController {
         controlButton.title = "OptionButton01".localized
         optionButton.title = "OptionButton02".localized
         commandButton.title = "OptionButton03".localized
+        warningLabel.stringValue = "Warning".localized
+        warningLabel.isHidden = true
         
         // Usage
         usageTitleLabel.stringValue = "UsageTitle".localized
@@ -65,9 +72,39 @@ class GlueViewController: NSViewController {
         
     }
     
+    private func updateWarningStatus() {
+        let config = configurationManager.config
+        if configurationManager.getOnCount() == 1 {
+            if config.control {
+                changeRestButtonStatus(.control)
+            } else if config.option {
+                changeRestButtonStatus(.option)
+            } else if config.command {
+                changeRestButtonStatus(.command)
+            }
+            warningLabel.isHidden = false
+        } else {
+            controlButton.isEnabled = true
+            optionButton.isEnabled = true
+            commandButton.isEnabled = true
+            warningLabel.isHidden = true
+        }
+    }
+    
     private func updateUsage() {
         let usageSuffix = configurationManager.getUsage()
         usageLabel.stringValue = "\(usageSuffix) + " + "Usage".localized
+    }
+    
+    private func changeRestButtonStatus(_ category: GlueConfigCategory) {
+        switch category {
+        case .control:
+            controlButton.isEnabled = false
+        case .option:
+            optionButton.isEnabled = false
+        case .command:
+            commandButton.isEnabled = false
+        }
     }
     
 }

@@ -17,5 +17,7 @@
 "OptionButton02" = "On/Off";
 "OptionButton03" = "On/Off";
 
+"Warning" = "You should keep at least one keyboard shortcut.";
+
 "UsageTitle" = "Usage";
 "Usage" = "⬆ or ⬇ or ⬅ or ➡";

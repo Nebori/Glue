@@ -84,6 +84,20 @@ class GlueConfigurationManager: CodableReadWritable, Singleton {
         return usageStr
     }
     
+    func getOnCount() -> Int {
+        var count = 0
+        if config.control {
+            count += 1
+        }
+        if config.option {
+            count += 1
+        }
+        if config.command {
+            count += 1
+        }
+        return count
+    }
+    
     func changeConfig(_ category: GlueConfigCategory) {
         switch category {
         case .control:
