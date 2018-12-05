@@ -28,16 +28,19 @@ class GlueViewController: NSViewController {
     // MARK: - UI Componenets Action
     @IBAction func controlButtonAction(_ sender: Any) {
         configurationManager.changeConfig(.control)
+        updateUIStatus()
         updateWarningStatus()
         updateUsage()
     }
     @IBAction func optionButtonAction(_ sender: Any) {
         configurationManager.changeConfig(.option)
+        updateUIStatus()
         updateWarningStatus()
         updateUsage()
     }
     @IBAction func commandButtonAction(_ sender: Any) {
         configurationManager.changeConfig(.command)
+        updateUIStatus()
         updateWarningStatus()
         updateUsage()
     }
@@ -69,7 +72,22 @@ class GlueViewController: NSViewController {
     }
     
     private func updateUIStatus() {
-        
+        let config = configurationManager.config
+        if config.control {
+            controlLabel.alphaValue = 1
+        } else {
+            controlLabel.alphaValue = 0.3
+        }
+        if config.option {
+            optionLabel.alphaValue = 1
+        } else {
+            optionLabel.alphaValue = 0.3
+        }
+        if config.command {
+            commandLabel.alphaValue = 1
+        } else {
+            commandLabel.alphaValue = 0.3
+        }
     }
     
     private func updateWarningStatus() {
