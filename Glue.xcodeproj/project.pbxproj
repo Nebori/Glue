@@ -21,6 +21,8 @@
 		954B566721B669DD00BF56E1 /* GlueConfigurationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954B566621B669DD00BF56E1 /* GlueConfigurationManager.swift */; };
 		954B566B21B6775D00BF56E1 /* AppWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954B566A21B6775D00BF56E1 /* AppWindow.swift */; };
 		954B566D21B677B600BF56E1 /* FrameStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954B566C21B677B600BF56E1 /* FrameStore.swift */; };
+		954B567221B8E78A00BF56E1 /* TestGlueConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954B567121B8E78A00BF56E1 /* TestGlueConfiguration.swift */; };
+		954B567621B8EF8B00BF56E1 /* TestGlueConfigurationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954B567521B8EF8B00BF56E1 /* TestGlueConfigurationManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +59,8 @@
 		954B566621B669DD00BF56E1 /* GlueConfigurationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlueConfigurationManager.swift; sourceTree = "<group>"; };
 		954B566A21B6775D00BF56E1 /* AppWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppWindow.swift; sourceTree = "<group>"; };
 		954B566C21B677B600BF56E1 /* FrameStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameStore.swift; sourceTree = "<group>"; };
+		954B567121B8E78A00BF56E1 /* TestGlueConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestGlueConfiguration.swift; sourceTree = "<group>"; };
+		954B567521B8EF8B00BF56E1 /* TestGlueConfigurationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestGlueConfigurationManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +121,8 @@
 		954B563721B5014500BF56E1 /* GlueTests */ = {
 			isa = PBXGroup;
 			children = (
+				954B566F21B8E75000BF56E1 /* Manager */,
+				954B567021B8E76D00BF56E1 /* Model */,
 				954B563821B5014500BF56E1 /* GlueTests.swift */,
 				954B563A21B5014500BF56E1 /* Info.plist */,
 			);
@@ -174,6 +180,22 @@
 				954B566C21B677B600BF56E1 /* FrameStore.swift */,
 			);
 			path = 3rdParty;
+			sourceTree = "<group>";
+		};
+		954B566F21B8E75000BF56E1 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				954B567521B8EF8B00BF56E1 /* TestGlueConfigurationManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		954B567021B8E76D00BF56E1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				954B567121B8E78A00BF56E1 /* TestGlueConfiguration.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -301,6 +323,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				954B563921B5014500BF56E1 /* GlueTests.swift in Sources */,
+				954B567621B8EF8B00BF56E1 /* TestGlueConfigurationManager.swift in Sources */,
+				954B567221B8E78A00BF56E1 /* TestGlueConfiguration.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
