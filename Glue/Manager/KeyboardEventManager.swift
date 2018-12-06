@@ -23,28 +23,38 @@ class KeyboardEventManager {
     }
     
     private func classification(_ event: NSEvent) {
-        guard let config = GlueConfigurationManager.sharedInstance,
+        guard let configManager = GlueConfigurationManager.sharedInstance,
             let app = AppWindow.frontmost() else {
             return
         }
-        let (flags, numFlags) = config.getConfigOption()
-        
-        // TODO: 구조체로 변경 예정
-        let (up, down, right, left) = (126, 125, 124, 123)
+        let (flags, numFlags) = configManager.getConfigOption()
+        let config = configManager.config
         
         switch event.modifierFlags.intersection(.deviceIndependentFlagsMask) {
-        case flags where event.keyCode == up,
-             numFlags where event.keyCode == up:
+        case flags where event.keyCode == config.up,
+             numFlags where event.keyCode == config.up:
             app.attachFillTop()
-        case flags where event.keyCode == down,
-             numFlags where event.keyCode == down:
+        case flags where event.keyCode == config.down,
+             numFlags where event.keyCode == config.down:
             app.attachFillBottom()
-        case flags where event.keyCode == right,
-             numFlags where event.keyCode == right:
+        case flags where event.keyCode == config.right,
+             numFlags where event.keyCode == config.right:
             app.attachFillRight()
-        case flags where event.keyCode == left,
-             numFlags where event.keyCode == left:
+        case flags where event.keyCode == config.left,
+             numFlags where event.keyCode == config.left:
             app.attachFillLeft()
+        case flags where event.keyCode == config.rightUp,
+             numFlags where event.keyCode == config.rightUp:
+            app.attachRightTop()
+        case flags where event.keyCode == config.leftUp,
+             numFlags where event.keyCode == config.leftUp:
+            app.attachLeftTop()
+        case flags where event.keyCode == config.rightDown,
+             numFlags where event.keyCode == config.rightDown:
+            app.attachRightBottom()
+        case flags where event.keyCode == config.leftDown,
+             numFlags where event.keyCode == config.leftDown:
+            app.attachLeftBottom()
         default:
             break
         }

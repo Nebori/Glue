@@ -316,22 +316,20 @@ class AppWindow: CustomStringConvertible {
     func attachRightTop() {
         if let visibleFrame = screen()?.visibleFrame {
             let x: CGFloat! = visibleFrame.origin.x >= 0 ? visibleFrame.width/2 : visibleFrame.origin.x/2
-            let y: CGFloat! = visibleFrame.origin.y
+            let y: CGFloat! = visibleFrame.maxY
             let width: CGFloat! = visibleFrame.size.width/2
             let height: CGFloat! = visibleFrame.size.height/2
-            let frame: CGRect! = CGRect(x: x, y: y, width: width, height: height)
-            self.size = frame.size
+            globalFrame = CGRect(x: x, y: y, width: width, height: height)
         }
     }
     
     func attachLeftTop() {
         if let visibleFrame = screen()?.visibleFrame {
             let x: CGFloat! = visibleFrame.origin.x
-            let y: CGFloat! = visibleFrame.origin.y
+            let y: CGFloat! = visibleFrame.maxY
             let width: CGFloat! = visibleFrame.size.width/2
             let height: CGFloat! = visibleFrame.size.height/2
-            let frame: CGRect! = CGRect(x: x, y: y, width: width, height: height)
-            self.size = frame.size
+            globalFrame = CGRect(x: x, y: y, width: width, height: height)
         }
     }
     
@@ -341,9 +339,7 @@ class AppWindow: CustomStringConvertible {
             let y: CGFloat! = visibleFrame.maxY - visibleFrame.height
             let width: CGFloat! = visibleFrame.width/2
             let height: CGFloat! = visibleFrame.height/2
-            let frame: CGRect! = CGRect(x: x, y: y, width: width, height: height)
-            self.size = frame.size
-            self.origin = frame.origin
+            globalFrame = CGRect(x: x, y: y, width: width, height: height)
         }
     }
     
@@ -353,9 +349,7 @@ class AppWindow: CustomStringConvertible {
             let y: CGFloat! = visibleFrame.maxY - visibleFrame.height
             let width: CGFloat! = visibleFrame.width/2
             let height: CGFloat! = visibleFrame.height/2
-            let frame: CGRect! = CGRect(x: x, y: y, width: width, height: height)
-            self.size = frame.size
-            self.origin = frame.origin
+            globalFrame = CGRect(x: x, y: y, width: width, height: height)
         }
     }
     

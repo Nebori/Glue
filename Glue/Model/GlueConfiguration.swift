@@ -15,12 +15,36 @@ enum GlueConfigCategory {
 }
 
 struct GlueConfig: Codable {
+    // Shortcut
     var control: Bool
     var option: Bool
     var command: Bool
+    // Direction
+    var up: UInt16
+    var down: UInt16
+    var right: UInt16
+    var left: UInt16
+    // Quarter
+    var rightUp: UInt16
+    var leftUp: UInt16
+    var rightDown: UInt16
+    var leftDown: UInt16
+    
     init() {
         control = true
         option = true
         command = true
+        
+        up = 126
+        down = 125
+        right = 124
+        left = 123
+        
+        // o p
+        // l ;
+        rightUp = 35
+        leftUp = 31
+        rightDown = 41
+        leftDown = 37
     }
 }
