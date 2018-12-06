@@ -47,6 +47,9 @@ class GlueViewController: NSViewController {
         updateWarningStatus()
         updateUsage()
     }
+    @IBAction func quitButtonAction(_ sender: Any) {
+        exit(0)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -776,8 +776,23 @@
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
+                            <button translatesAutoresizingMaskIntoConstraints="NO" id="dlI-CS-Gwh">
+                                <rect key="frame" x="435" y="225" width="25" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="cKu-aX-5ZX"/>
+                                    <constraint firstAttribute="width" constant="25" id="frS-he-9cL"/>
+                                </constraints>
+                                <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="Close" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="beA-kp-Haw">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="quitButtonAction:" target="XfG-lQ-9wD" id="0II-bI-sh3"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <constraints>
+                            <constraint firstItem="dlI-CS-Gwh" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" id="4xv-yc-LQm"/>
                             <constraint firstAttribute="trailing" secondItem="MYE-K2-zmb" secondAttribute="trailing" constant="70" id="ChF-y1-ZhU"/>
                             <constraint firstItem="o8P-RA-gYc" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="FiF-pu-bNK"/>
                             <constraint firstItem="zjb-G3-pGq" firstAttribute="top" secondItem="O80-gY-qWE" secondAttribute="bottom" constant="15" id="Hhd-lr-x7k"/>
@@ -786,6 +801,7 @@
                             <constraint firstItem="o8P-RA-gYc" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="M3x-fU-tUf"/>
                             <constraint firstItem="z3g-f4-COf" firstAttribute="top" secondItem="mM6-ud-QDk" secondAttribute="bottom" constant="10" id="NVT-Hz-Pl2"/>
                             <constraint firstItem="M8C-Nj-1MO" firstAttribute="top" secondItem="zjb-G3-pGq" secondAttribute="bottom" constant="10" id="O75-Qx-VcP"/>
+                            <constraint firstAttribute="trailing" secondItem="dlI-CS-Gwh" secondAttribute="trailing" constant="20" id="PQG-pq-qr6"/>
                             <constraint firstItem="o8P-RA-gYc" firstAttribute="top" secondItem="v7N-4b-i1T" secondAttribute="bottom" constant="15" id="QZB-PU-yza"/>
                             <constraint firstItem="mM6-ud-QDk" firstAttribute="centerY" secondItem="zjb-G3-pGq" secondAttribute="centerY" id="Tpd-h4-4wk"/>
                             <constraint firstAttribute="bottom" secondItem="o8P-RA-gYc" secondAttribute="bottom" constant="30" id="YYh-rq-wNH"/>
@@ -821,4 +837,7 @@
             <point key="canvasLocation" x="75" y="238"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Close" width="40" height="40"/>
+    </resources>
 </document>
