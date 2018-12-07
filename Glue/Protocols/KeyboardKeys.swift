@@ -606,13 +606,13 @@ struct KeyboardKey: Codable {
             str = "pageDown"
         // arrow
         case .up:
-            str = "up"
+            str = "⬆"
         case .down:
-            str = "down"
+            str = "⬇"
         case .right:
-            str = "right"
+            str = "➡"
         case .left:
-            str = "left"
+            str = "⬅"
         // function
         case .esc:
             str = "esc"
