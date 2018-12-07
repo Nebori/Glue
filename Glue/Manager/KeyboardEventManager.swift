@@ -31,29 +31,29 @@ class KeyboardEventManager {
         let config = configManager.config
         
         switch event.modifierFlags.intersection(.deviceIndependentFlagsMask) {
-        case flags where event.keyCode == config.up,
-             numFlags where event.keyCode == config.up:
+        case flags where event.keyCode == config.up.getUInt16(),
+             numFlags where event.keyCode == config.up.getUInt16():
             app.attachFillTop()
-        case flags where event.keyCode == config.down,
-             numFlags where event.keyCode == config.down:
+        case flags where event.keyCode == config.down.getUInt16(),
+             numFlags where event.keyCode == config.down.getUInt16():
             app.attachFillBottom()
-        case flags where event.keyCode == config.right,
-             numFlags where event.keyCode == config.right:
+        case flags where event.keyCode == config.right.getUInt16(),
+             numFlags where event.keyCode == config.right.getUInt16():
             app.attachFillRight()
-        case flags where event.keyCode == config.left,
-             numFlags where event.keyCode == config.left:
+        case flags where event.keyCode == config.left.getUInt16(),
+             numFlags where event.keyCode == config.left.getUInt16():
             app.attachFillLeft()
-        case flags where event.keyCode == config.rightUp,
-             numFlags where event.keyCode == config.rightUp:
+        case flags where event.keyCode == config.rightUp.getUInt16(),
+             numFlags where event.keyCode == config.rightUp.getUInt16():
             app.attachRightTop()
-        case flags where event.keyCode == config.leftUp,
-             numFlags where event.keyCode == config.leftUp:
+        case flags where event.keyCode == config.leftUp.getUInt16(),
+             numFlags where event.keyCode == config.leftUp.getUInt16():
             app.attachLeftTop()
-        case flags where event.keyCode == config.rightDown,
-             numFlags where event.keyCode == config.rightDown:
+        case flags where event.keyCode == config.rightDown.getUInt16(),
+             numFlags where event.keyCode == config.rightDown.getUInt16():
             app.attachRightBottom()
-        case flags where event.keyCode == config.leftDown,
-             numFlags where event.keyCode == config.leftDown:
+        case flags where event.keyCode == config.leftDown.getUInt16(),
+             numFlags where event.keyCode == config.leftDown.getUInt16():
             app.attachLeftBottom()
         default:
             break

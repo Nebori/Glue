@@ -8,10 +8,10 @@
 
 import Cocoa
 
-enum KeyboardKeys {
+enum KeyboardKeys: Int, Codable {
     // Main keys
     //      1 line
-    case one
+    case one = 0
     case two
     case three
     case four
@@ -119,7 +119,7 @@ enum KeyboardKeys {
     case unknown
 }
 
-struct KeyboardKey {
+struct KeyboardKey: Codable {
     private var key: KeyboardKeys
     init(_ key: KeyboardKeys) {
         self.key = key
