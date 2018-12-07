@@ -23,6 +23,8 @@
 		954B566D21B677B600BF56E1 /* FrameStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954B566C21B677B600BF56E1 /* FrameStore.swift */; };
 		954B567221B8E78A00BF56E1 /* TestGlueConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954B567121B8E78A00BF56E1 /* TestGlueConfiguration.swift */; };
 		954B567621B8EF8B00BF56E1 /* TestGlueConfigurationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954B567521B8EF8B00BF56E1 /* TestGlueConfigurationManager.swift */; };
+		954B567821BA061F00BF56E1 /* KeyboardKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954B567721BA061F00BF56E1 /* KeyboardKeys.swift */; };
+		954B567A21BA153400BF56E1 /* TestKeyboardKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954B567921BA153300BF56E1 /* TestKeyboardKeys.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +63,8 @@
 		954B566C21B677B600BF56E1 /* FrameStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameStore.swift; sourceTree = "<group>"; };
 		954B567121B8E78A00BF56E1 /* TestGlueConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestGlueConfiguration.swift; sourceTree = "<group>"; };
 		954B567521B8EF8B00BF56E1 /* TestGlueConfigurationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestGlueConfigurationManager.swift; sourceTree = "<group>"; };
+		954B567721BA061F00BF56E1 /* KeyboardKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardKeys.swift; sourceTree = "<group>"; };
+		954B567921BA153300BF56E1 /* TestKeyboardKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestKeyboardKeys.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +138,7 @@
 			children = (
 				954B564B21B5261E00BF56E1 /* CodableReadWritable.swift */,
 				954B565821B64D0900BF56E1 /* Singleton.swift */,
+				954B567721BA061F00BF56E1 /* KeyboardKeys.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -194,6 +199,7 @@
 			isa = PBXGroup;
 			children = (
 				954B567121B8E78A00BF56E1 /* TestGlueConfiguration.swift */,
+				954B567921BA153300BF56E1 /* TestKeyboardKeys.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -310,6 +316,7 @@
 				954B566721B669DD00BF56E1 /* GlueConfigurationManager.swift in Sources */,
 				954B566521B6673400BF56E1 /* StringExtension.swift in Sources */,
 				954B565921B64D0900BF56E1 /* Singleton.swift in Sources */,
+				954B567821BA061F00BF56E1 /* KeyboardKeys.swift in Sources */,
 				954B566D21B677B600BF56E1 /* FrameStore.swift in Sources */,
 				954B565721B6408900BF56E1 /* KeyboardEventManager.swift in Sources */,
 				954B564A21B525FE00BF56E1 /* GlueConfiguration.swift in Sources */,
@@ -324,6 +331,7 @@
 			files = (
 				954B563921B5014500BF56E1 /* GlueTests.swift in Sources */,
 				954B567621B8EF8B00BF56E1 /* TestGlueConfigurationManager.swift in Sources */,
+				954B567A21BA153400BF56E1 /* TestKeyboardKeys.swift in Sources */,
 				954B567221B8E78A00BF56E1 /* TestGlueConfiguration.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
