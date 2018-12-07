@@ -25,8 +25,18 @@ class GlueViewController: NSViewController {
     @IBOutlet weak var optionButton: NSButton!
     @IBOutlet weak var commandButton: NSButton!
     @IBOutlet weak var warningLabel: NSTextField!
+    
+    // Usage
     @IBOutlet weak var usageTitleLabel: NSTextField!
     @IBOutlet weak var usageLabel: NSTextField!
+    @IBOutlet weak var upLabel: NSTextField!
+    @IBOutlet weak var downLabel: NSTextField!
+    @IBOutlet weak var rightLabel: NSTextField!
+    @IBOutlet weak var leftLabel: NSTextField!
+    @IBOutlet weak var rightUpLabel: NSTextField!
+    @IBOutlet weak var leftUpLabel: NSTextField!
+    @IBOutlet weak var rightDownLabel: NSTextField!
+    @IBOutlet weak var leftDownLabel: NSTextField!
     
     // MARK: - UI Componenets Action
     @IBAction func controlButtonAction(_ sender: Any) {
@@ -94,6 +104,14 @@ class GlueViewController: NSViewController {
         } else {
             commandLabel.alphaValue = disableOpacity
         }
+        upLabel.stringValue = config.up.getString()
+        downLabel.stringValue = config.down.getString()
+        rightLabel.stringValue = config.right.getString()
+        leftLabel.stringValue = config.left.getString()
+        rightUpLabel.stringValue = config.rightUp.getString()
+        leftUpLabel.stringValue = config.leftUp.getString()
+        rightDownLabel.stringValue = config.rightDown.getString()
+        leftDownLabel.stringValue = config.leftDown.getString()
     }
     
     private func updateWarningStatus() {
@@ -116,8 +134,8 @@ class GlueViewController: NSViewController {
     }
     
     private func updateUsage() {
-        let usageSuffix = configurationManager.getUsage()
-        usageLabel.stringValue = "\(usageSuffix) + " + "Usage".localized
+        let usage = configurationManager.getUsage()
+        usageLabel.stringValue = usage
     }
     
     private func changeRestButtonStatus(_ category: GlueConfigCategory) {

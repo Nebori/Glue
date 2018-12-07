@@ -64,10 +64,10 @@ struct GlueConfig: Codable {
         right = KeyboardKey.init(.right)
         left = KeyboardKey.init(.left)
         
-        rightUp = KeyboardKey.init(.o)
-        leftUp = KeyboardKey.init(.p)
-        rightDown = KeyboardKey.init(.l)
-        leftDown = KeyboardKey.init(.semicolon)
+        rightUp = KeyboardKey.init(.p)
+        leftUp = KeyboardKey.init(.o)
+        rightDown = KeyboardKey.init(.semicolon)
+        leftDown = KeyboardKey.init(.l)
         
         moveUp = KeyboardKey.init(.u)
         moveDown = KeyboardKey.init(.j)
