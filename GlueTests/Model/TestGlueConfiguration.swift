@@ -42,6 +42,22 @@ class TestGlueConfiguration: XCTestCase {
         assert(expectationOption == config.option)
         assert(expectationCommand == config.command)
     }
+    
+    func testChangeShortcut() {
+        // up: 12, q
+        // down: 13, w
+        // right: 14, e
+        let (expectationUp, expectationDown, expectationRight) =
+            ("q", "w", "e")
+        
+        config.up = KeyboardKey.init(12)
+        config.down = KeyboardKey.init(13)
+        config.right = KeyboardKey.init(14)
+        
+        assert(expectationUp == config.up.getString())
+        assert(expectationDown == config.down.getString())
+        assert(expectationRight == config.right.getString())
+    }
 
     func testExample() {
         // This is an example of a functional test case.

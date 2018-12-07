@@ -9,9 +9,28 @@
 import Cocoa
 
 enum GlueConfigCategory {
+    // Shortcut
     case control
     case option
     case command
+}
+
+enum GlueConfigShortcut {
+    // Direction
+    case up
+    case down
+    case right
+    case left
+    // Quarter
+    case rightUp
+    case leftUp
+    case rightDown
+    case leftDown
+    // Move Screen
+    case moveUp
+    case moveDown
+    case moveRight
+    case moveLeft
 }
 
 struct GlueConfig: Codable {
@@ -20,31 +39,39 @@ struct GlueConfig: Codable {
     var option: Bool
     var command: Bool
     // Direction
-    var up: UInt16
-    var down: UInt16
-    var right: UInt16
-    var left: UInt16
+    var up: KeyboardKey
+    var down: KeyboardKey
+    var right: KeyboardKey
+    var left: KeyboardKey
     // Quarter
-    var rightUp: UInt16
-    var leftUp: UInt16
-    var rightDown: UInt16
-    var leftDown: UInt16
+    var rightUp: KeyboardKey
+    var leftUp: KeyboardKey
+    var rightDown: KeyboardKey
+    var leftDown: KeyboardKey
+    // Move Screen
+    var moveUp: KeyboardKey
+    var moveDown: KeyboardKey
+    var moveRight: KeyboardKey
+    var moveLeft: KeyboardKey
     
     init() {
         control = true
         option = true
         command = true
         
-        up = 126
-        down = 125
-        right = 124
-        left = 123
+        up = KeyboardKey.init(.up)
+        down = KeyboardKey.init(.down)
+        right = KeyboardKey.init(.right)
+        left = KeyboardKey.init(.left)
         
-        // o p
-        // l ;
-        rightUp = 35
-        leftUp = 31
-        rightDown = 41
-        leftDown = 37
+        rightUp = KeyboardKey.init(.p)
+        leftUp = KeyboardKey.init(.o)
+        rightDown = KeyboardKey.init(.semicolon)
+        leftDown = KeyboardKey.init(.l)
+        
+        moveUp = KeyboardKey.init(.u)
+        moveDown = KeyboardKey.init(.j)
+        moveRight = KeyboardKey.init(.k)
+        moveLeft = KeyboardKey.init(.h)
     }
 }
