@@ -19,6 +19,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         if let button = statusItem.button {
             button.image = NSImage(named:NSImage.Name("StatusbarIcon"))
+            button.image?.isTemplate = true
             button.action = #selector(togglePopover(_:))
         }
         popover.contentViewController = GlueViewController.freshController()
