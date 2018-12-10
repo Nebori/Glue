@@ -12,6 +12,10 @@ class GlueViewController: NSViewController {
     
     let disableOpacity: CGFloat = 0.3
     let ableOpacity: CGFloat = 1
+    var inDarkMode: Bool {
+        let mode = UserDefaults.standard.string(forKey: "AppleInterfaceStyle")
+        return mode == "Dark"
+    }
     
     let keyboardManager: KeyboardEventManager = KeyboardEventManager()
     let configurationManager: GlueConfigurationManager = GlueConfigurationManager.sharedInstance
@@ -69,6 +73,11 @@ class GlueViewController: NSViewController {
         updateUIStatus()
         updateWarningStatus()
         updateUsage()
+
+        DistributedNotificationCenter.default().addObserver(self,
+                                                            selector: #selector(detectedChangeAppearanceMode),
+                                                            name: NSNotification.Name(rawValue: "AppleInterfaceThemeChangedNotification"),
+                                                            object: nil)
     }
     
     private func initUIComponents() {
@@ -136,6 +145,18 @@ class GlueViewController: NSViewController {
     private func updateUsage() {
         let usage = configurationManager.getUsage()
         usageLabel.stringValue = usage
+    }
+    
+    @objc private func detectedChangeAppearanceMode() {
+        if inDarkMode {
+            if #available(OSX 10.14, *) {
+                self.view.appearance = NSAppearance(named: .darkAqua)
+            } else {
+                // Fallback on earlier versions
+            }
+        } else {
+            self.view.appearance = NSAppearance(named: .aqua)
+        }
     }
     
     private func changeRestButtonStatus(_ category: GlueConfigCategory) {
