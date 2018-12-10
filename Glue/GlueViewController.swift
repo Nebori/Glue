@@ -12,6 +12,10 @@ class GlueViewController: NSViewController {
     
     let disableOpacity: CGFloat = 0.3
     let ableOpacity: CGFloat = 1
+    var inDarkMode: Bool {
+        let mode = UserDefaults.standard.string(forKey: "AppleInterfaceStyle")
+        return mode == "Dark"
+    }
     
     let keyboardManager: KeyboardEventManager = KeyboardEventManager()
     let configurationManager: GlueConfigurationManager = GlueConfigurationManager.sharedInstance
@@ -25,8 +29,18 @@ class GlueViewController: NSViewController {
     @IBOutlet weak var optionButton: NSButton!
     @IBOutlet weak var commandButton: NSButton!
     @IBOutlet weak var warningLabel: NSTextField!
+    
+    // Usage
     @IBOutlet weak var usageTitleLabel: NSTextField!
     @IBOutlet weak var usageLabel: NSTextField!
+    @IBOutlet weak var upLabel: NSTextField!
+    @IBOutlet weak var downLabel: NSTextField!
+    @IBOutlet weak var rightLabel: NSTextField!
+    @IBOutlet weak var leftLabel: NSTextField!
+    @IBOutlet weak var rightUpLabel: NSTextField!
+    @IBOutlet weak var leftUpLabel: NSTextField!
+    @IBOutlet weak var rightDownLabel: NSTextField!
+    @IBOutlet weak var leftDownLabel: NSTextField!
     
     // MARK: - UI Componenets Action
     @IBAction func controlButtonAction(_ sender: Any) {
@@ -47,6 +61,9 @@ class GlueViewController: NSViewController {
         updateWarningStatus()
         updateUsage()
     }
+    @IBAction func quitButtonAction(_ sender: Any) {
+        exit(0)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,6 +73,11 @@ class GlueViewController: NSViewController {
         updateUIStatus()
         updateWarningStatus()
         updateUsage()
+
+        DistributedNotificationCenter.default().addObserver(self,
+                                                            selector: #selector(detectedChangeAppearanceMode),
+                                                            name: NSNotification.Name(rawValue: "AppleInterfaceThemeChangedNotification"),
+                                                            object: nil)
     }
     
     private func initUIComponents() {
@@ -91,6 +113,14 @@ class GlueViewController: NSViewController {
         } else {
             commandLabel.alphaValue = disableOpacity
         }
+        upLabel.stringValue = config.up.getString()
+        downLabel.stringValue = config.down.getString()
+        rightLabel.stringValue = config.right.getString()
+        leftLabel.stringValue = config.left.getString()
+        rightUpLabel.stringValue = config.rightUp.getString()
+        leftUpLabel.stringValue = config.leftUp.getString()
+        rightDownLabel.stringValue = config.rightDown.getString()
+        leftDownLabel.stringValue = config.leftDown.getString()
     }
     
     private func updateWarningStatus() {
@@ -113,8 +143,20 @@ class GlueViewController: NSViewController {
     }
     
     private func updateUsage() {
-        let usageSuffix = configurationManager.getUsage()
-        usageLabel.stringValue = "\(usageSuffix) + " + "Usage".localized
+        let usage = configurationManager.getUsage()
+        usageLabel.stringValue = usage
+    }
+    
+    @objc private func detectedChangeAppearanceMode() {
+        if inDarkMode {
+            if #available(OSX 10.14, *) {
+                self.view.appearance = NSAppearance(named: .darkAqua)
+            } else {
+                // Fallback on earlier versions
+            }
+        } else {
+            self.view.appearance = NSAppearance(named: .aqua)
+        }
     }
     
     private func changeRestButtonStatus(_ category: GlueConfigCategory) {
@@ -137,7 +179,6 @@ extension GlueViewController {
         guard let viewcontroller = storyboard.instantiateController(withIdentifier: identifier) as? GlueViewController else {
             fatalError("Why cant i find GlueViewController? - Check Main.storyboard")
         }
-        viewcontroller.view.layer?.backgroundColor = CGColor.white
         return viewcontroller
     }
 }

@@ -50,6 +50,10 @@ class GlueConfigurationManager: CodableReadWritable, Singleton {
         }
     }
     
+    func save() {
+        save(codableObj: config)
+    }
+    
     func getConfigOption() -> (NSEvent.ModifierFlags, NSEvent.ModifierFlags) {
         var flags: NSEvent.ModifierFlags = NSEvent.ModifierFlags()
         var numFlags: NSEvent.ModifierFlags = NSEvent.ModifierFlags()
@@ -109,4 +113,5 @@ class GlueConfigurationManager: CodableReadWritable, Singleton {
         }
         save(codableObj: config)
     }
+    
 }

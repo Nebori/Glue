@@ -23,28 +23,38 @@ class KeyboardEventManager {
     }
     
     private func classification(_ event: NSEvent) {
-        guard let config = GlueConfigurationManager.sharedInstance,
+        guard let configManager = GlueConfigurationManager.sharedInstance,
             let app = AppWindow.frontmost() else {
             return
         }
-        let (flags, numFlags) = config.getConfigOption()
-        
-        // TODO: 구조체로 변경 예정
-        let (up, down, right, left) = (126, 125, 124, 123)
+        let (flags, numFlags) = configManager.getConfigOption()
+        let config = configManager.config
         
         switch event.modifierFlags.intersection(.deviceIndependentFlagsMask) {
-        case flags where event.keyCode == up,
-             numFlags where event.keyCode == up:
+        case flags where event.keyCode == config.up.getUInt16(),
+             numFlags where event.keyCode == config.up.getUInt16():
             app.attachFillTop()
-        case flags where event.keyCode == down,
-             numFlags where event.keyCode == down:
+        case flags where event.keyCode == config.down.getUInt16(),
+             numFlags where event.keyCode == config.down.getUInt16():
             app.attachFillBottom()
-        case flags where event.keyCode == right,
-             numFlags where event.keyCode == right:
+        case flags where event.keyCode == config.right.getUInt16(),
+             numFlags where event.keyCode == config.right.getUInt16():
             app.attachFillRight()
-        case flags where event.keyCode == left,
-             numFlags where event.keyCode == left:
+        case flags where event.keyCode == config.left.getUInt16(),
+             numFlags where event.keyCode == config.left.getUInt16():
             app.attachFillLeft()
+        case flags where event.keyCode == config.rightUp.getUInt16(),
+             numFlags where event.keyCode == config.rightUp.getUInt16():
+            app.attachRightTop()
+        case flags where event.keyCode == config.leftUp.getUInt16(),
+             numFlags where event.keyCode == config.leftUp.getUInt16():
+            app.attachLeftTop()
+        case flags where event.keyCode == config.rightDown.getUInt16(),
+             numFlags where event.keyCode == config.rightDown.getUInt16():
+            app.attachRightBottom()
+        case flags where event.keyCode == config.leftDown.getUInt16(),
+             numFlags where event.keyCode == config.leftDown.getUInt16():
+            app.attachLeftBottom()
         default:
             break
         }
