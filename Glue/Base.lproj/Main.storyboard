@@ -772,7 +772,7 @@
                                 <rect key="frame" x="18" y="364" width="444" height="21"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="Warning" id="24Y-2i-jQj">
                                     <font key="font" metaFont="system" size="17"/>
-                                    <color key="textColor" name="systemRedColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
@@ -863,7 +863,7 @@
                                 <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="LeftDown" id="wnh-8D-iie"/>
                             </imageView>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="2l9-y0-DU2" userLabel="UpLabel">
-                                <rect key="frame" x="196" y="200" width="8" height="25"/>
+                                <rect key="frame" x="196" y="201" width="8" height="25"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" id="YxA-Ib-uo2">
                                     <font key="font" metaFont="system" size="21"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -871,7 +871,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="mUj-Ld-VNh" userLabel="DownLabel">
-                                <rect key="frame" x="196" y="144" width="8" height="25"/>
+                                <rect key="frame" x="196" y="145" width="8" height="25"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" id="Yaf-QD-bXl">
                                     <font key="font" metaFont="system" size="21"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -879,7 +879,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ofV-3e-CMP" userLabel="RightLabel">
-                                <rect key="frame" x="196" y="88" width="8" height="25"/>
+                                <rect key="frame" x="196" y="89" width="8" height="25"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" id="0P8-Ax-U0Q">
                                     <font key="font" metaFont="system" size="21"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -895,7 +895,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="lpE-vH-0oE" userLabel="RightUpLabel">
-                                <rect key="frame" x="337" y="200" width="8" height="25"/>
+                                <rect key="frame" x="337" y="201" width="8" height="25"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" id="iYP-Nx-ZRe">
                                     <font key="font" metaFont="system" size="21"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -903,7 +903,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="cyo-RY-fdV" userLabel="LeftUpLabel">
-                                <rect key="frame" x="337" y="144" width="8" height="25"/>
+                                <rect key="frame" x="337" y="145" width="8" height="25"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" id="wD4-Jf-cAk">
                                     <font key="font" metaFont="system" size="21"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -911,7 +911,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="8UT-pp-433" userLabel="RightDownLabel">
-                                <rect key="frame" x="337" y="88" width="8" height="25"/>
+                                <rect key="frame" x="337" y="89" width="8" height="25"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" id="oEm-uI-lJv">
                                     <font key="font" metaFont="system" size="21"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -1016,7 +1016,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Close" width="40" height="40"/>
+        <image name="Close" width="45" height="50"/>
         <image name="Down" width="250" height="250"/>
         <image name="Left" width="250" height="250"/>
         <image name="LeftDown" width="250" height="250"/>
