@@ -146,8 +146,7 @@ class AppWindow: CustomStringConvertible {
         
         set {
             if let frame = newValue {
-                appOrigin = CGPoint(x: frame.origin.x, y: primaryScreenHeight - frame.size.height - frame.origin.y)
-                size = frame.size
+                neboriGlobalFrame(frame: frame)
             }
         }
     }
@@ -278,14 +277,14 @@ class AppWindow: CustomStringConvertible {
     func attachFillTop() {
         if let visibleFrame = screen()?.visibleFrame, let current = globalFrame {
             let x: CGFloat! = visibleFrame.origin.x
-            let y: CGFloat! = visibleFrame.maxY
+            let y: CGFloat! = visibleFrame.origin.y + (visibleFrame.size.height / 2)
             let width: CGFloat! = visibleFrame.size.width
             let height: CGFloat! = visibleFrame.size.height/2
             
-            if (x, y, width, height) == (current.origin.x,
-                                         current.origin.y,
-                                         current.size.width,
-                                         current.size.height) {
+            if (mistakeEqual(x, current.origin.x),
+                mistakeEqual(y, current.origin.y),
+                mistakeEqual(width, current.size.width),
+                mistakeEqual(height, current.size.height)) == (true, true, true, true) {
                 let _ = sideBySide(direction: .sideByUp)
                 return
             }
@@ -301,10 +300,10 @@ class AppWindow: CustomStringConvertible {
             let width: CGFloat! = visibleFrame.size.width
             let height: CGFloat! = visibleFrame.size.height/2
             
-            if (x, y, width, height) == (current.origin.x,
-                                         current.origin.y,
-                                         current.size.width,
-                                         current.size.height) {
+            if (mistakeEqual(x, current.origin.x),
+                mistakeEqual(y, current.origin.y),
+                mistakeEqual(width, current.size.width),
+                mistakeEqual(height, current.size.height)) == (true, true, true, true) {
                 let _ = sideBySide(direction: .sideByDown)
                 return
             }
@@ -315,8 +314,8 @@ class AppWindow: CustomStringConvertible {
     
     func attachRightTop() {
         if let visibleFrame = screen()?.visibleFrame {
-            let x: CGFloat! = visibleFrame.origin.x >= 0 ? visibleFrame.width/2 : visibleFrame.origin.x/2
-            let y: CGFloat! = visibleFrame.maxY
+            let x: CGFloat! = visibleFrame.origin.x + visibleFrame.width/2
+            let y: CGFloat! = visibleFrame.origin.y + (visibleFrame.size.height / 2)
             let width: CGFloat! = visibleFrame.size.width/2
             let height: CGFloat! = visibleFrame.size.height/2
             globalFrame = CGRect(x: x, y: y, width: width, height: height)
@@ -326,7 +325,7 @@ class AppWindow: CustomStringConvertible {
     func attachLeftTop() {
         if let visibleFrame = screen()?.visibleFrame {
             let x: CGFloat! = visibleFrame.origin.x
-            let y: CGFloat! = visibleFrame.maxY
+            let y: CGFloat! = visibleFrame.origin.y + (visibleFrame.size.height / 2)
             let width: CGFloat! = visibleFrame.size.width/2
             let height: CGFloat! = visibleFrame.size.height/2
             globalFrame = CGRect(x: x, y: y, width: width, height: height)
@@ -336,7 +335,7 @@ class AppWindow: CustomStringConvertible {
     func attachRightBottom() {
         if let visibleFrame = screen()?.visibleFrame {
             let x: CGFloat! = visibleFrame.origin.x + visibleFrame.width/2
-            let y: CGFloat! = visibleFrame.maxY - visibleFrame.height
+            let y: CGFloat! = visibleFrame.origin.y
             let width: CGFloat! = visibleFrame.width/2
             let height: CGFloat! = visibleFrame.height/2
             globalFrame = CGRect(x: x, y: y, width: width, height: height)
@@ -346,7 +345,7 @@ class AppWindow: CustomStringConvertible {
     func attachLeftBottom() {
         if let visibleFrame = screen()?.visibleFrame {
             let x: CGFloat! = visibleFrame.origin.x
-            let y: CGFloat! = visibleFrame.maxY - visibleFrame.height
+            let y: CGFloat! = visibleFrame.origin.y
             let width: CGFloat! = visibleFrame.width/2
             let height: CGFloat! = visibleFrame.height/2
             globalFrame = CGRect(x: x, y: y, width: width, height: height)
@@ -354,26 +353,7 @@ class AppWindow: CustomStringConvertible {
     }
     
     func sideBySide(direction: framePosition) -> Bool {
-        guard let screen = screen(), let screenFrame = globalFrame else {
-            return true
-        }
-        
-        var changeRect: CGRect? = CGRect()
-        
-        switch direction {
-        case .sideByUp:
-            changeRect = CGRect(x: screenFrame.origin.x, y: screenFrame.origin.y + screenFrame.height, width: screenFrame.width, height: screenFrame.height)
-        case .sideByDown:
-            changeRect = CGRect(x: screenFrame.origin.x, y: screen.frame.origin.y - screenFrame.height, width: screenFrame.width, height: screenFrame.height)
-        case .sideByRight:
-            changeRect = CGRect(x: screen.frame.maxX + screenFrame.width, y: screenFrame.origin.y, width: screenFrame.width, height: screenFrame.height)
-        case .sideByLeft:
-            changeRect = CGRect(x: screen.frame.minX - screenFrame.width, y: screenFrame.origin.y, width: screenFrame.width, height: screenFrame.height)
-        default:
-            return true
-        }
-        
-        guard let destinationScreen = getScreenWithValidatePosition(position: changeRect!) else {
+        guard let destinationScreen = sideBySideCheck(direction: direction) else {
             return true
         }
         
@@ -381,13 +361,15 @@ class AppWindow: CustomStringConvertible {
             return true
         }
         
+        var changeRect: CGRect = CGRect()
+        
         switch direction {
         case .sideByUp:
             changeRect = CGRect(x: destinationScreen.visibleFrame.origin.x, y: destinationScreen.visibleFrame.origin.y,
-                                width: destinationScreen.visibleFrame.width/2, height: destinationScreen.visibleFrame.height/2)
+                                width: destinationScreen.visibleFrame.width, height: destinationScreen.visibleFrame.height/2)
         case .sideByDown:
-            changeRect = CGRect(x: destinationScreen.visibleFrame.origin.x, y: destinationScreen.visibleFrame.origin.y,
-                                width: destinationScreen.visibleFrame.width/2, height: destinationScreen.visibleFrame.height/2)
+            changeRect = CGRect(x: destinationScreen.visibleFrame.origin.x, y: destinationScreen.visibleFrame.origin.y + destinationScreen.visibleFrame.height/2,
+                                width: destinationScreen.visibleFrame.width, height: destinationScreen.visibleFrame.height/2)
         case .sideByRight:
             changeRect = CGRect(x: destinationScreen.visibleFrame.origin.x,
                                 y: destinationScreen.visibleFrame.origin.y,
@@ -407,6 +389,92 @@ class AppWindow: CustomStringConvertible {
         return false
     }
     
+    func sideBySideDirectly(direction: framePosition) -> Bool {
+        guard let destinationScreen = sideBySideCheck(direction: direction),
+            let screen = screen(),
+            let current = globalFrame else {
+                return true
+        }
+        
+        if destinationScreen == self.screen() {
+            return true
+        }
+
+        let visibleFrame = screen.visibleFrame
+        let originXPer = current.origin.x < 0 ? 1 - current.origin.x.magnitude / visibleFrame.size.width : (current.origin.x.magnitude - visibleFrame.origin.x.magnitude) / visibleFrame.size.width
+        let originYPer = current.origin.y < 0 ? 1 - current.origin.y.magnitude / visibleFrame.size.height : (current.origin.y.magnitude - visibleFrame.origin.y.magnitude) / visibleFrame.size.height
+        let sizeXPer = current.size.width / visibleFrame.size.width
+        let sizeYPer = current.size.height / visibleFrame.size.height
+        
+        let roundXPer = roundedWithLength(Double(originXPer) , length: 2)
+        let roundYPer = roundedWithLength(Double(originYPer) , length: 2)
+        let roundsizeXPer = roundedWithLength(Double(sizeXPer) , length: 2)
+        let roundsizeYPer = roundedWithLength(Double(sizeYPer) , length: 2)
+        
+        var x: CGFloat = 0.0
+        var y: CGFloat = 0.0
+        var width: CGFloat = 0.0
+        var height: CGFloat = 0.0
+        
+        let frame = destinationScreen.visibleFrame
+        switch direction {
+        case .sideByUp:
+            x = frame.size.width * roundXPer + frame.origin.x
+            y = frame.size.height * roundYPer + frame.origin.y
+            width = frame.size.width * roundsizeXPer
+            height = frame.size.height * roundsizeYPer
+        case .sideByDown:
+            x = frame.size.width * roundXPer + frame.origin.x
+            y = frame.size.height * roundYPer - frame.origin.y.magnitude
+            width = frame.size.width * roundsizeXPer
+            height = frame.size.height * roundsizeYPer
+        case .sideByRight:
+            x = frame.size.width * roundXPer + frame.origin.x
+            y = frame.size.height * roundYPer
+            width = frame.size.width * roundsizeXPer
+            height = frame.size.height * roundsizeYPer
+        case .sideByLeft:
+            x = frame.size.width * roundXPer - frame.origin.x.magnitude
+            y = frame.size.height * roundYPer + frame.origin.y.magnitude
+            width = frame.size.width * roundsizeXPer
+            height = frame.size.height * roundsizeYPer
+        default:
+            return false
+        }
+        
+        let rect = CGRect(x: x, y: y, width: width, height: height)
+        if isScreenValidatePosition(position: rect) {
+            globalFrame = rect
+        }
+        return true
+    }
+    
+    private func sideBySideCheck(direction: framePosition) -> NSScreen? {
+        guard let screen = screen(), let screenFrame = globalFrame else {
+            return nil
+        }
+        
+        var changeRect: CGRect = CGRect()
+        switch direction {
+            case .sideByUp:
+                changeRect = CGRect(x: screenFrame.origin.x, y: screen.visibleFrame.origin.y + screen.visibleFrame.size.height, width: screenFrame.width, height: screenFrame.height)
+            case .sideByDown:
+                changeRect = CGRect(x: screenFrame.origin.x, y: screen.visibleFrame.origin.y - screenFrame.height, width: screenFrame.width, height: screenFrame.height)
+            case .sideByRight:
+                changeRect = CGRect(x: (screen.visibleFrame.origin.x + screen.visibleFrame.width) + screenFrame.width, y: screenFrame.origin.y, width: screenFrame.width, height: screenFrame.height)
+            case .sideByLeft:
+                changeRect = CGRect(x: screen.visibleFrame.origin.x - screenFrame.width, y: screenFrame.origin.y, width: screenFrame.width, height: screenFrame.height)
+            default:
+                return nil
+        }
+        
+        guard let destinationScreen = getScreenWithValidatePosition(position: changeRect) else {
+            return nil
+        }
+        
+        return destinationScreen
+    }
+    
     func getScreenWithValidatePosition(position: CGRect) -> NSScreen? {
         let screens = NSScreen.screens
         var result: NSScreen? = nil
@@ -414,19 +482,75 @@ class AppWindow: CustomStringConvertible {
         
         for screen in screens {
             let calculatedRect: CGRect = screenCalculateBeforeChangePosition(currentScreen: screen, position: position)
-            let overlap = screen.frame.intersection(calculatedRect)
-            if overlap.width * overlap.height > area {
-                area = overlap.width * overlap.height
+            let overlap = screen.visibleFrame.intersection(calculatedRect)
+            let frame: CGRect = screen.visibleFrame
+            #if DEBUG
+                print("###############################################################################")
+                print("\(position.origin.x), \(position.origin.y), \(position.size.width), \(position.size.height)")
+                print("\(frame.origin.x), \(frame.origin.y), \(frame.size.width), \(frame.size.height)")
+                print("\(overlap.origin.x), \(overlap.origin.y), \(overlap.size.width), \(overlap.size.height)")
+                print("###############################################################################")
+            #endif
+            let minW = overlap.width == 0 ? 1 : overlap.width
+            let minH = overlap.height == 0 ? 1 : overlap.height
+            if minW * minH >= area {
+                area = minW * minH
                 result = screen
             }
         }
-        
+        if area == 1 {
+            return nil
+        }
         return result
+    }
+    
+    func isScreenValidatePosition(position: CGRect) -> Bool {
+        guard let screen = getScreenWithValidatePosition(position: position) else {
+            return false
+        }
+        let screenFrame = screen.frame
+        let calcWidth = screenFrame.origin.x < 0 ? screenFrame.origin.x.magnitude - position.origin.x.magnitude + position.size.width
+            : position.origin.x - screen.frame.origin.x
+        let calcHeight = screenFrame.origin.y < 0 ? screenFrame.origin.y.magnitude - position.origin.y.magnitude + position.size.height
+            : position.origin.y - screen.frame.origin.y
+        if screen.frame.width < calcWidth || screen.frame.height < calcHeight {
+            return false
+        }
+        return true
     }
     
     func screenCalculateBeforeChangePosition(currentScreen: NSScreen, position: CGRect) -> CGRect {
         var originX: CGFloat = 0, originY: CGFloat = 0 , width: CGFloat = 0 , height: CGFloat = 0
         let frame = currentScreen.frame
+        
+        /*
+         // 공통
+         position.origin.x
+         position.origin.y // 해당 포지션의 0값
+        */
+        /*
+         // 둘 다 음수
+         position.origin.x + position.width * -1 // 음수니 최대 좌측값
+         position.origin.y + position.height * -1 // 음수니 최대 아래값
+         */
+        
+        /*
+         // x값이 음수
+         position.origin.x + position.width * -1 // 음수니 최대 좌측값
+         position.origin.y + position.height // 해당 포지션의 최대값
+         */
+        
+        /*
+         // y값이 음수
+         position.origin.x + position.width // 해당 포지션의 최대값
+         position.origin.y + position.height * -1 // 음수니 최대 아래값
+         */
+        
+        /*
+         // 둘 다 양수
+         position.origin.x + position.width
+         position.origin.y + position.height // 해당 포지션의 최대값
+         */
         
         originX = position.origin.x
         originY = position.origin.y
@@ -434,6 +558,64 @@ class AppWindow: CustomStringConvertible {
         height = position.height > frame.height ? frame.height : position.height
         
         return CGRect(x: originX, y: originY, width: width, height: height)
+    }
+    
+    func roundedWithLength(_ value: Double, length: Int) -> CGFloat {
+        let powDecimal = pow(10, Double(length))
+        let prepare = round(value * powDecimal)
+        return CGFloat(prepare / powDecimal)
+    }
+    
+    func mistakeEqual(_ first: CGFloat, _ second: CGFloat) -> Bool {
+        let mistakeMargin: CGFloat = 2
+        if first.distance(to: second).magnitude > mistakeMargin {
+            return false
+        }
+        return true
+    }
+    
+    func neboriGlobalFrame(frame: CGRect) {
+        /*
+         a. size -> origin (Size first, origin second)
+         b. origin -> size (Origin first, size second)
+         
+         1. Monitor size < frame size (b)
+         2. Small monitor -> Big monitor (b)
+         3. Big monitor -> Small monitor (a)
+         4. Same monitor (b)
+         */
+        enum MoveType {
+            case sizeFirst
+            case originFirst
+        }
+        
+        var type: MoveType = .sizeFirst
+        if let screen = screen(),
+            let destinationScreen = getScreenWithValidatePosition(position: frame) {
+            
+            if screen.frame.size.width <= frame.size.width || screen.frame.size.height <= frame.size.height {
+                // 1. Monitor size < frame size (b)
+                type = .originFirst
+            }
+            if screen.frame.size.width < destinationScreen.frame.size.width || screen.frame.size.height < destinationScreen.frame.size.height {
+                // 2. Small monitor -> Big monitor (b)
+                type = .originFirst
+            } else if screen.frame.size.width > destinationScreen.frame.size.width || screen.frame.size.height > destinationScreen.frame.size.height {
+                // 3. Big monitor -> Small monitor (a)
+                type = .sizeFirst
+            } else if screen.frame == destinationScreen.frame {
+                // 4. Same monitor (b)
+                type = .originFirst
+            }
+            switch type {
+            case .sizeFirst:
+                size = frame.size
+                appOrigin = CGPoint(x: frame.origin.x, y: primaryScreenHeight - frame.size.height - frame.origin.y)
+            case .originFirst:
+                appOrigin = CGPoint(x: frame.origin.x, y: primaryScreenHeight - frame.size.height - frame.origin.y)
+                size = frame.size
+            }
+        }
     }
     
     //  MARK: nebori92 END -
