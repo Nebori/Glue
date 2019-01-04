@@ -4,6 +4,7 @@
 //
 //  Created by Shad Sharma on 7/3/16.
 //  Copyright © 2016 Shad Sharma. All rights reserved.
+//  MIT License.
 //  Github: https://github.com/shadanan/mado-size
 //
 
