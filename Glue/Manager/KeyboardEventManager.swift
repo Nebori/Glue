@@ -55,8 +55,21 @@ class KeyboardEventManager {
         case flags where event.keyCode == config.leftDown.getUInt16(),
              numFlags where event.keyCode == config.leftDown.getUInt16():
             app.attachLeftBottom()
+        case flags where event.keyCode == config.moveUp.getUInt16(),
+             numFlags where event.keyCode == config.moveUp.getUInt16():
+            let _ = app.sideBySideDirectly(direction: .sideByUp)
+        case flags where event.keyCode == config.moveDown.getUInt16(),
+             numFlags where event.keyCode == config.moveDown.getUInt16():
+            let _ = app.sideBySideDirectly(direction: .sideByDown)
+        case flags where event.keyCode == config.moveRight.getUInt16(),
+             numFlags where event.keyCode == config.moveRight.getUInt16():
+            let _ = app.sideBySideDirectly(direction: .sideByRight)
+        case flags where event.keyCode == config.moveLeft.getUInt16(),
+             numFlags where event.keyCode == config.moveLeft.getUInt16():
+            let _ = app.sideBySideDirectly(direction: .sideByLeft)
         default:
             break
         }
     }
 }
+
