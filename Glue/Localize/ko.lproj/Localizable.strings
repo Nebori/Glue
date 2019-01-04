@@ -20,3 +20,7 @@
 "Warning" = "⚠️ 적어도 하나의 단축키를 유지해야합니다.";
 
 "UsageTitle" = "사용법";
+
+// MARK: - LicenseViewController
+"GlueLicense" = "Glue is Copyright © 2018 nebori92. All rights reserved.";
+"Contact" = "Contact. nebori92@gmail.com";

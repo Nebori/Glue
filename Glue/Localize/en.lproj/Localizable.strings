@@ -20,3 +20,7 @@
 "Warning" = "⚠️ You should keep at least one keyboard shortcut.";
 
 "UsageTitle" = "Usage";
+
+// MARK: - LicenseViewController
+"GlueLicense" = "Glue is Copyright © 2018 nebori92. All rights reserved.";
+"Contact" = "Contact. nebori92@gmail.com";
