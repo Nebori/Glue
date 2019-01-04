@@ -681,10 +681,10 @@
             </objects>
             <point key="canvasLocation" x="75" y="6"/>
         </scene>
-        <!--License View Controller-->
+        <!--License-->
         <scene sceneID="d5E-3P-vtR">
             <objects>
-                <viewController id="ics-nl-1tn" customClass="LicenseViewController" customModule="Glue" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="License" id="ics-nl-1tn" customClass="LicenseViewController" customModule="Glue" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="PFc-F3-kap">
                         <rect key="frame" x="0.0" y="0.0" width="450" height="383"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -1078,7 +1078,7 @@
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
                                 <connections>
-                                    <segue destination="ics-nl-1tn" kind="popover" popoverAnchorView="xId-Bc-XXy" popoverBehavior="t" preferredEdge="maxY" id="FkF-BV-jfO"/>
+                                    <segue destination="ics-nl-1tn" kind="show" id="FkF-BV-jfO"/>
                                 </connections>
                             </button>
                         </subviews>
