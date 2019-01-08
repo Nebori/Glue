@@ -686,11 +686,11 @@
             <objects>
                 <viewController title="License" id="ics-nl-1tn" customClass="LicenseViewController" customModule="Glue" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="PFc-F3-kap">
-                        <rect key="frame" x="0.0" y="0.0" width="450" height="383"/>
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="490"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RvP-lC-APc">
-                                <rect key="frame" x="175" y="248" width="100" height="100"/>
+                                <rect key="frame" x="175" y="355" width="100" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="8xl-4r-XqA"/>
                                     <constraint firstAttribute="height" constant="100" id="cZw-AK-MJY"/>
@@ -698,7 +698,7 @@
                                 <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="AppIconImage" id="w38-0c-5Nx"/>
                             </imageView>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="mzY-g6-xm1">
-                                <rect key="frame" x="191" y="202" width="68" height="36"/>
+                                <rect key="frame" x="191" y="309" width="68" height="36"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="Glue" id="BGY-CG-Pbt">
                                     <font key="font" metaFont="system" size="30"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -706,7 +706,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="MRX-ma-qYF">
-                                <rect key="frame" x="48" y="174" width="354" height="18"/>
+                                <rect key="frame" x="48" y="281" width="354" height="18"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="License" id="NpU-Ub-fnJ">
                                     <font key="font" metaFont="system" size="14"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -714,7 +714,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="zz0-3y-ymV">
-                                <rect key="frame" x="48" y="146" width="354" height="18"/>
+                                <rect key="frame" x="48" y="253" width="354" height="18"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="Contact" id="bf6-7Z-WqV">
                                     <font key="font" metaFont="system" size="14"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -722,10 +722,10 @@
                                 </textFieldCell>
                             </textField>
                             <box verticalHuggingPriority="750" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="pqR-TA-zil">
-                                <rect key="frame" x="0.0" y="133" width="450" height="5"/>
+                                <rect key="frame" x="0.0" y="240" width="450" height="5"/>
                             </box>
                             <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="TX7-6x-QTk">
-                                <rect key="frame" x="48" y="88" width="354" height="17"/>
+                                <rect key="frame" x="48" y="195" width="354" height="17"/>
                                 <textFieldCell key="cell" selectable="YES" alignment="center" title="ThirdParty" id="Vtd-W1-tw9">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -760,7 +760,7 @@
                 </viewController>
                 <customObject id="QSw-in-Kf5" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-468" y="442.5"/>
+            <point key="canvasLocation" x="-468" y="496"/>
         </scene>
         <!--Glue View Controller-->
         <scene sceneID="hIz-AP-VOD">
