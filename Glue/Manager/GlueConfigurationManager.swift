@@ -54,24 +54,20 @@ class GlueConfigurationManager: CodableReadWritable, Singleton {
         save(codableObj: config)
     }
     
-    func getConfigOption() -> (NSEvent.ModifierFlags, NSEvent.ModifierFlags) {
+    func getConfigOption() -> NSEvent.ModifierFlags {
         var flags: NSEvent.ModifierFlags = NSEvent.ModifierFlags()
-        var numFlags: NSEvent.ModifierFlags = NSEvent.ModifierFlags()
         if config.control {
             flags.insert(.control)
-            numFlags.insert(.control)
         }
         if config.option {
             flags.insert(.option)
-            numFlags.insert(.option)
         }
         if config.command {
             flags.insert(.command)
-            numFlags.insert(.command)
         }
-        numFlags.insert(.numericPad)
-        numFlags.insert(.function)
-        return (flags, numFlags)
+        flags.insert(.numericPad)
+        flags.insert(.function)
+        return flags
     }
     
     func getUsage() -> String {
