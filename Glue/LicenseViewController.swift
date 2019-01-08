@@ -20,7 +20,6 @@ class LicenseViewController: NSViewController, NSTextFieldDelegate {
         super.viewDidLoad()
         // Do view setup here.
         let contactString = "Contact".localized
-        
         glueLicenseLabel.stringValue = "GlueLicense".localized
         contactLabel.attributedStringValue = contactString.addLink(font: NSFont.systemFont(ofSize: 14),
                                                                    wantLinkString: "nebori92@gmail.com",
