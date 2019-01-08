@@ -49,21 +49,15 @@ class GlueViewController: NSViewController {
     // MARK: - UI Componenets Action
     @IBAction func controlButtonAction(_ sender: Any) {
         configurationManager.changeConfig(.control)
-        updateUIStatus()
-        updateWarningStatus()
-        updateUsage()
+        updateAll()
     }
     @IBAction func optionButtonAction(_ sender: Any) {
         configurationManager.changeConfig(.option)
-        updateUIStatus()
-        updateWarningStatus()
-        updateUsage()
+        updateAll()
     }
     @IBAction func commandButtonAction(_ sender: Any) {
         configurationManager.changeConfig(.command)
-        updateUIStatus()
-        updateWarningStatus()
-        updateUsage()
+        updateAll()
     }
     @IBAction func quitButtonAction(_ sender: Any) {
         exit(0)
@@ -98,6 +92,13 @@ class GlueViewController: NSViewController {
         
         // Usage
         usageTitleLabel.stringValue = "UsageTitle".localized
+    }
+    
+    private func updateAll() {
+        keyboardManager.updateRegisterShortcut()
+        updateUIStatus()
+        updateWarningStatus()
+        updateUsage()
     }
     
     private func updateUIStatus() {
