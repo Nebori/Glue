@@ -244,10 +244,10 @@ class AppWindow: CustomStringConvertible {
             let width: CGFloat! = visibleFrame.size.width/2
             let height: CGFloat! = visibleFrame.size.height
             
-            if (x, y, width, height) == (current.origin.x,
-                                         current.origin.y,
-                                         current.size.width,
-                                         current.size.height) {
+            if (mistakeEqual(x, current.origin.x),
+                mistakeEqual(y, current.origin.y),
+                mistakeEqual(width, current.size.width),
+                mistakeEqual(height, current.size.height)) == (true, true, true, true) {
                 let _ = sideBySide(direction: .sideByRight)
                 return
             }
@@ -263,10 +263,10 @@ class AppWindow: CustomStringConvertible {
             let width: CGFloat! = visibleFrame.size.width/2
             let height: CGFloat! = visibleFrame.size.height
             
-            if (x, y, width, height) == (current.origin.x,
-                                         current.origin.y,
-                                         current.size.width,
-                                         current.size.height) {
+            if (mistakeEqual(x, current.origin.x),
+                mistakeEqual(y, current.origin.y),
+                mistakeEqual(width, current.size.width),
+                mistakeEqual(height, current.size.height)) == (true, true, true, true) {
                 let _ = sideBySide(direction: .sideByLeft)
                 return
             }
