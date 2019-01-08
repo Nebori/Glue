@@ -41,6 +41,10 @@ class GlueViewController: NSViewController {
     @IBOutlet weak var leftUpLabel: NSTextField!
     @IBOutlet weak var rightDownLabel: NSTextField!
     @IBOutlet weak var leftDownLabel: NSTextField!
+    @IBOutlet weak var moveUpLabel: NSTextField!
+    @IBOutlet weak var moveDownLabel: NSTextField!
+    @IBOutlet weak var moveRightLabel: NSTextField!
+    @IBOutlet weak var moveLeftLabel: NSTextField!
     
     // MARK: - UI Componenets Action
     @IBAction func controlButtonAction(_ sender: Any) {
@@ -121,6 +125,10 @@ class GlueViewController: NSViewController {
         leftUpLabel.stringValue = config.leftUp.getString()
         rightDownLabel.stringValue = config.rightDown.getString()
         leftDownLabel.stringValue = config.leftDown.getString()
+        moveUpLabel.stringValue = config.moveUp.getString()
+        moveDownLabel.stringValue = config.moveDown.getString()
+        moveRightLabel.stringValue = config.moveRight.getString()
+        moveLeftLabel.stringValue = config.moveLeft.getString()
     }
     
     private func updateWarningStatus() {

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		95400CA721DF3004007A104E /* LicenseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95400CA621DF3004007A104E /* LicenseViewController.swift */; };
 		954B562621B5014200BF56E1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954B562521B5014200BF56E1 /* AppDelegate.swift */; };
 		954B562A21B5014500BF56E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 954B562921B5014500BF56E1 /* Assets.xcassets */; };
 		954B562D21B5014500BF56E1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 954B562B21B5014500BF56E1 /* Main.storyboard */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		95400CA621DF3004007A104E /* LicenseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LicenseViewController.swift; sourceTree = "<group>"; };
 		954B562221B5014200BF56E1 /* Glue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Glue.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		954B562521B5014200BF56E1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		954B562921B5014500BF56E1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 				954B562E21B5014500BF56E1 /* Info.plist */,
 				954B562F21B5014500BF56E1 /* Glue.entitlements */,
 				954B564321B5102500BF56E1 /* GlueViewController.swift */,
+				95400CA621DF3004007A104E /* LicenseViewController.swift */,
 			);
 			path = Glue;
 			sourceTree = "<group>";
@@ -315,6 +318,7 @@
 				954B566B21B6775D00BF56E1 /* AppWindow.swift in Sources */,
 				954B566721B669DD00BF56E1 /* GlueConfigurationManager.swift in Sources */,
 				954B566521B6673400BF56E1 /* StringExtension.swift in Sources */,
+				95400CA721DF3004007A104E /* LicenseViewController.swift in Sources */,
 				954B565921B64D0900BF56E1 /* Singleton.swift in Sources */,
 				954B567821BA061F00BF56E1 /* KeyboardKeys.swift in Sources */,
 				954B566D21B677B600BF56E1 /* FrameStore.swift in Sources */,
@@ -491,7 +495,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = HR25439TCX;
+				DEVELOPMENT_TEAM = 893244S8B9;
 				INFOPLIST_FILE = Glue/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -510,7 +514,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = HR25439TCX;
+				DEVELOPMENT_TEAM = 893244S8B9;
 				INFOPLIST_FILE = Glue/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
