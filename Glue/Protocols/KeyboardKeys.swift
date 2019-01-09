@@ -651,8 +651,8 @@ struct KeyboardKey: Codable {
         }
         return str
     }
-    func getUInt16() -> UInt16 {
-        var uint: UInt16 = 0
+    func getUInt() -> UInt {
+        var uint: UInt = 0
         switch key {
         // 1 line
         case .one:

@@ -7,69 +7,82 @@
 //
 
 import Cocoa
+import MASShortcut
 
 class KeyboardEventManager {
     init() {
-        // keyboard event handling
+        // window risize handling
         let options : NSDictionary = [kAXTrustedCheckOptionPrompt.takeRetainedValue() as NSString: true]
         let accessibilityEnabled = AXIsProcessTrustedWithOptions(options)
         
         if accessibilityEnabled == false {
-            NSApplication.shared.terminate(self)
+            // 권한 설정을 부탁하는 내용이 추가 되어야 함
         }
-        NSEvent.addGlobalMonitorForEvents(matching: .keyDown) { (event: NSEvent) in
-            self.classification(event)
-        }
+        registerShortcut()
     }
     
-    private func classification(_ event: NSEvent) {
-        guard let configManager = GlueConfigurationManager.sharedInstance,
-            let app = AppWindow.frontmost() else {
+    func registerShortcut() {
+        // TODO: 코드 리펙토링 필요.
+        guard let configManager = GlueConfigurationManager.sharedInstance else {
             return
         }
-        let (flags, numFlags) = configManager.getConfigOption()
+        let flags = configManager.getConfigOption()
         let config = configManager.config
+        MASShortcutMonitor.shared()?.register(MASShortcut.init(keyCode: config.up.getUInt(),
+                                                               modifierFlags: flags.rawValue), withAction: {
+                                                                AppWindow.frontmost()?.attachFillTop()
+        })
+        MASShortcutMonitor.shared()?.register(MASShortcut.init(keyCode: config.down.getUInt(),
+                                                               modifierFlags: flags.rawValue), withAction: {
+                                                                AppWindow.frontmost()?.attachFillBottom()
+        })
+        MASShortcutMonitor.shared()?.register(MASShortcut.init(keyCode: config.right.getUInt(),
+                                                               modifierFlags: flags.rawValue), withAction: {
+                                                                AppWindow.frontmost()?.attachFillRight()
+        })
+        MASShortcutMonitor.shared()?.register(MASShortcut.init(keyCode: config.left.getUInt(),
+                                                               modifierFlags: flags.rawValue), withAction: {
+                                                                AppWindow.frontmost()?.attachFillLeft()
+        })
         
-        switch event.modifierFlags.intersection(.deviceIndependentFlagsMask) {
-        case flags where event.keyCode == config.up.getUInt16(),
-             numFlags where event.keyCode == config.up.getUInt16():
-            app.attachFillTop()
-        case flags where event.keyCode == config.down.getUInt16(),
-             numFlags where event.keyCode == config.down.getUInt16():
-            app.attachFillBottom()
-        case flags where event.keyCode == config.right.getUInt16(),
-             numFlags where event.keyCode == config.right.getUInt16():
-            app.attachFillRight()
-        case flags where event.keyCode == config.left.getUInt16(),
-             numFlags where event.keyCode == config.left.getUInt16():
-            app.attachFillLeft()
-        case flags where event.keyCode == config.rightUp.getUInt16(),
-             numFlags where event.keyCode == config.rightUp.getUInt16():
-            app.attachRightTop()
-        case flags where event.keyCode == config.leftUp.getUInt16(),
-             numFlags where event.keyCode == config.leftUp.getUInt16():
-            app.attachLeftTop()
-        case flags where event.keyCode == config.rightDown.getUInt16(),
-             numFlags where event.keyCode == config.rightDown.getUInt16():
-            app.attachRightBottom()
-        case flags where event.keyCode == config.leftDown.getUInt16(),
-             numFlags where event.keyCode == config.leftDown.getUInt16():
-            app.attachLeftBottom()
-        case flags where event.keyCode == config.moveUp.getUInt16(),
-             numFlags where event.keyCode == config.moveUp.getUInt16():
-            let _ = app.sideBySideDirectly(direction: .sideByUp)
-        case flags where event.keyCode == config.moveDown.getUInt16(),
-             numFlags where event.keyCode == config.moveDown.getUInt16():
-            let _ = app.sideBySideDirectly(direction: .sideByDown)
-        case flags where event.keyCode == config.moveRight.getUInt16(),
-             numFlags where event.keyCode == config.moveRight.getUInt16():
-            let _ = app.sideBySideDirectly(direction: .sideByRight)
-        case flags where event.keyCode == config.moveLeft.getUInt16(),
-             numFlags where event.keyCode == config.moveLeft.getUInt16():
-            let _ = app.sideBySideDirectly(direction: .sideByLeft)
-        default:
-            break
-        }
+        MASShortcutMonitor.shared()?.register(MASShortcut.init(keyCode: config.rightUp.getUInt(),
+                                                               modifierFlags: flags.rawValue), withAction: {
+                                                                AppWindow.frontmost()?.attachRightTop()
+        })
+        MASShortcutMonitor.shared()?.register(MASShortcut.init(keyCode: config.leftUp.getUInt(),
+                                                               modifierFlags: flags.rawValue), withAction: {
+                                                                AppWindow.frontmost()?.attachLeftTop()
+        })
+        MASShortcutMonitor.shared()?.register(MASShortcut.init(keyCode: config.rightDown.getUInt(),
+                                                               modifierFlags: flags.rawValue), withAction: {
+                                                                AppWindow.frontmost()?.attachRightBottom()
+        })
+        MASShortcutMonitor.shared()?.register(MASShortcut.init(keyCode: config.leftDown.getUInt(),
+                                                               modifierFlags: flags.rawValue), withAction: {
+                                                                AppWindow.frontmost()?.attachLeftBottom()
+        })
+        
+        MASShortcutMonitor.shared()?.register(MASShortcut.init(keyCode: config.moveUp.getUInt(),
+                                                               modifierFlags: flags.rawValue), withAction: {
+                                                                _ = AppWindow.frontmost()?.sideBySideDirectly(direction: .sideByUp)
+        })
+        MASShortcutMonitor.shared()?.register(MASShortcut.init(keyCode: config.moveDown.getUInt(),
+                                                               modifierFlags: flags.rawValue), withAction: {
+                                                                _ = AppWindow.frontmost()?.sideBySideDirectly(direction: .sideByDown)
+        })
+        MASShortcutMonitor.shared()?.register(MASShortcut.init(keyCode: config.moveRight.getUInt(),
+                                                               modifierFlags: flags.rawValue), withAction: {
+                                                                _ = AppWindow.frontmost()?.sideBySideDirectly(direction: .sideByRight)
+        })
+        MASShortcutMonitor.shared()?.register(MASShortcut.init(keyCode: config.moveLeft.getUInt(),
+                                                               modifierFlags: flags.rawValue), withAction: {
+                                                                _ = AppWindow.frontmost()?.sideBySideDirectly(direction: .sideByLeft)
+        })
+    }
+    
+    func updateRegisterShortcut() {
+        MASShortcutMonitor.shared()?.unregisterAllShortcuts()
+        registerShortcut()
     }
 }
 
