@@ -52,7 +52,9 @@ Eng, Kor supported
 
 Part of [mado-size github](https://github.com/shadanan/mado-size)
 
+## Contact
 
+[nebori92@gmail.com](mailto:nebori92@gmail.com)
 
 ## License
 
