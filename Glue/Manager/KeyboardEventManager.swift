@@ -11,12 +11,12 @@ import MASShortcut
 
 class KeyboardEventManager {
     init() {
-        // keyboard event handling
+        // window risize handling
         let options : NSDictionary = [kAXTrustedCheckOptionPrompt.takeRetainedValue() as NSString: true]
         let accessibilityEnabled = AXIsProcessTrustedWithOptions(options)
         
         if accessibilityEnabled == false {
-            NSApplication.shared.terminate(self)
+            // 권한 설정을 부탁하는 내용이 추가 되어야 함
         }
         registerShortcut()
     }
@@ -24,11 +24,10 @@ class KeyboardEventManager {
     func registerShortcut() {
         // TODO: 코드 리펙토링 필요.
         guard let configManager = GlueConfigurationManager.sharedInstance else {
-                return
+            return
         }
         let flags = configManager.getConfigOption()
         let config = configManager.config
-        
         MASShortcutMonitor.shared()?.register(MASShortcut.init(keyCode: config.up.getUInt(),
                                                                modifierFlags: flags.rawValue), withAction: {
                                                                 AppWindow.frontmost()?.attachFillTop()
