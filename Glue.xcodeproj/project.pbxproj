@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		42A8301CE8AB37FECA1D4098 /* Pods_GlueTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2CF7FD6C05A0A9345FA2607 /* Pods_GlueTests.framework */; };
-		4DC31CF5E0F9900AF27C144E /* Pods_Glue.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72EC2B3573D7883B14C2BCEB /* Pods_Glue.framework */; };
+		60358C6935D646FC05C38AB1 /* Pods_Glue.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FDE06BE19F0891BC916FE5A /* Pods_Glue.framework */; };
+		875E171B1535D9D126E136C7 /* Pods_GlueTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E40EB5CAC309111C323D6809 /* Pods_GlueTests.framework */; };
 		95400CA721DF3004007A104E /* LicenseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95400CA621DF3004007A104E /* LicenseViewController.swift */; };
 		954B562621B5014200BF56E1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954B562521B5014200BF56E1 /* AppDelegate.swift */; };
 		954B562A21B5014500BF56E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 954B562921B5014500BF56E1 /* Assets.xcassets */; };
@@ -41,10 +41,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		05CF97E6C282060E0ACDFA2C /* Pods-Glue.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Glue.debug.xcconfig"; path = "Target Support Files/Pods-Glue/Pods-Glue.debug.xcconfig"; sourceTree = "<group>"; };
-		72EC2B3573D7883B14C2BCEB /* Pods_Glue.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Glue.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		794DB2BCF9C2CA78F26F8C3A /* Pods-GlueTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GlueTests.debug.xcconfig"; path = "Target Support Files/Pods-GlueTests/Pods-GlueTests.debug.xcconfig"; sourceTree = "<group>"; };
-		7D5FC082D1B2CD58E95F735D /* Pods-GlueTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GlueTests.release.xcconfig"; path = "Target Support Files/Pods-GlueTests/Pods-GlueTests.release.xcconfig"; sourceTree = "<group>"; };
+		40C565FC1ABCACE8B1E9AADF /* Pods-Glue.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Glue.debug.xcconfig"; path = "Target Support Files/Pods-Glue/Pods-Glue.debug.xcconfig"; sourceTree = "<group>"; };
+		87F7661B3A0FFFB0E5F3D5E5 /* Pods-GlueTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GlueTests.debug.xcconfig"; path = "Target Support Files/Pods-GlueTests/Pods-GlueTests.debug.xcconfig"; sourceTree = "<group>"; };
+		8A3E5F8052BABE7B4B22CD71 /* Pods-GlueTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GlueTests.release.xcconfig"; path = "Target Support Files/Pods-GlueTests/Pods-GlueTests.release.xcconfig"; sourceTree = "<group>"; };
+		8FDE06BE19F0891BC916FE5A /* Pods_Glue.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Glue.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		95400CA621DF3004007A104E /* LicenseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LicenseViewController.swift; sourceTree = "<group>"; };
 		954B562221B5014200BF56E1 /* Glue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Glue.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		954B562521B5014200BF56E1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -73,8 +73,8 @@
 		954B567521B8EF8B00BF56E1 /* TestGlueConfigurationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestGlueConfigurationManager.swift; sourceTree = "<group>"; };
 		954B567721BA061F00BF56E1 /* KeyboardKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardKeys.swift; sourceTree = "<group>"; };
 		954B567921BA153300BF56E1 /* TestKeyboardKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestKeyboardKeys.swift; sourceTree = "<group>"; };
-		C2698D48861BB1F4886D9F4A /* Pods-Glue.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Glue.release.xcconfig"; path = "Target Support Files/Pods-Glue/Pods-Glue.release.xcconfig"; sourceTree = "<group>"; };
-		F2CF7FD6C05A0A9345FA2607 /* Pods_GlueTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GlueTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C61681C06F81DB5F090E7FC /* Pods-Glue.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Glue.release.xcconfig"; path = "Target Support Files/Pods-Glue/Pods-Glue.release.xcconfig"; sourceTree = "<group>"; };
+		E40EB5CAC309111C323D6809 /* Pods_GlueTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GlueTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,7 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4DC31CF5E0F9900AF27C144E /* Pods_Glue.framework in Frameworks */,
+				60358C6935D646FC05C38AB1 /* Pods_Glue.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,13 +90,24 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				42A8301CE8AB37FECA1D4098 /* Pods_GlueTests.framework in Frameworks */,
+				875E171B1535D9D126E136C7 /* Pods_GlueTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		350AEF2CA10F4CCC460F1CE3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				40C565FC1ABCACE8B1E9AADF /* Pods-Glue.debug.xcconfig */,
+				9C61681C06F81DB5F090E7FC /* Pods-Glue.release.xcconfig */,
+				87F7661B3A0FFFB0E5F3D5E5 /* Pods-GlueTests.debug.xcconfig */,
+				8A3E5F8052BABE7B4B22CD71 /* Pods-GlueTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		954B561921B5014200BF56E1 = {
 			isa = PBXGroup;
 			children = (
@@ -104,7 +115,7 @@
 				954B563721B5014500BF56E1 /* GlueTests */,
 				954B562321B5014200BF56E1 /* Products */,
 				954B564D21B617B900BF56E1 /* Frameworks */,
-				D5F7A5D483A2D4266A03384E /* Pods */,
+				350AEF2CA10F4CCC460F1CE3 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -179,8 +190,8 @@
 			children = (
 				954B565121B61E1600BF56E1 /* Carbon.framework */,
 				954B564E21B617B900BF56E1 /* CoreGraphics.framework */,
-				72EC2B3573D7883B14C2BCEB /* Pods_Glue.framework */,
-				F2CF7FD6C05A0A9345FA2607 /* Pods_GlueTests.framework */,
+				8FDE06BE19F0891BC916FE5A /* Pods_Glue.framework */,
+				E40EB5CAC309111C323D6809 /* Pods_GlueTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -220,17 +231,6 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		D5F7A5D483A2D4266A03384E /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				05CF97E6C282060E0ACDFA2C /* Pods-Glue.debug.xcconfig */,
-				C2698D48861BB1F4886D9F4A /* Pods-Glue.release.xcconfig */,
-				794DB2BCF9C2CA78F26F8C3A /* Pods-GlueTests.debug.xcconfig */,
-				7D5FC082D1B2CD58E95F735D /* Pods-GlueTests.release.xcconfig */,
-			);
-			path = Pods;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -238,11 +238,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 954B563D21B5014500BF56E1 /* Build configuration list for PBXNativeTarget "Glue" */;
 			buildPhases = (
-				21A7D63DAA604544D797D889 /* [CP] Check Pods Manifest.lock */,
+				1B13FAC37DD32C741543A7FA /* [CP] Check Pods Manifest.lock */,
 				954B561E21B5014200BF56E1 /* Sources */,
 				954B561F21B5014200BF56E1 /* Frameworks */,
 				954B562021B5014200BF56E1 /* Resources */,
-				2B043CD1ED64F66F1A62AB68 /* [CP] Embed Pods Frameworks */,
+				E6A21B8726B7243E1741C5F0 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -257,7 +257,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 954B564021B5014500BF56E1 /* Build configuration list for PBXNativeTarget "GlueTests" */;
 			buildPhases = (
-				7E1658750E70DEEF06198488 /* [CP] Check Pods Manifest.lock */,
+				BB129E8F245C83C5BBC11305 /* [CP] Check Pods Manifest.lock */,
 				954B563021B5014500BF56E1 /* Sources */,
 				954B563121B5014500BF56E1 /* Frameworks */,
 				954B563221B5014500BF56E1 /* Resources */,
@@ -285,8 +285,11 @@
 					954B562121B5014200BF56E1 = {
 						CreatedOnToolsVersion = 10.1;
 						SystemCapabilities = {
+							com.apple.ApplicationGroups.Mac = {
+								enabled = 0;
+							};
 							com.apple.Sandbox = {
-								enabled = 1;
+								enabled = 0;
 							};
 						};
 					};
@@ -337,7 +340,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		21A7D63DAA604544D797D889 /* [CP] Check Pods Manifest.lock */ = {
+		1B13FAC37DD32C741543A7FA /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -359,29 +362,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		2B043CD1ED64F66F1A62AB68 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Glue/Pods-Glue-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/MASShortcut/MASShortcut.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MASShortcut.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Glue/Pods-Glue-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		7E1658750E70DEEF06198488 /* [CP] Check Pods Manifest.lock */ = {
+		BB129E8F245C83C5BBC11305 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -401,6 +382,28 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E6A21B8726B7243E1741C5F0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Glue/Pods-Glue-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/MASShortcut/MASShortcut.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MASShortcut.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Glue/Pods-Glue-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -587,13 +590,13 @@
 		};
 		954B563E21B5014500BF56E1 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 05CF97E6C282060E0ACDFA2C /* Pods-Glue.debug.xcconfig */;
+			baseConfigurationReference = 40C565FC1ABCACE8B1E9AADF /* Pods-Glue.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = Glue/Glue.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 893244S8B9;
+				DEVELOPMENT_TEAM = HR25439TCX;
 				INFOPLIST_FILE = Glue/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -602,19 +605,20 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				PRODUCT_BUNDLE_IDENTIFIER = com.nebori92.macos.Glue;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
 		954B563F21B5014500BF56E1 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C2698D48861BB1F4886D9F4A /* Pods-Glue.release.xcconfig */;
+			baseConfigurationReference = 9C61681C06F81DB5F090E7FC /* Pods-Glue.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = Glue/Glue.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 893244S8B9;
+				DEVELOPMENT_TEAM = HR25439TCX;
 				INFOPLIST_FILE = Glue/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -623,13 +627,14 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				PRODUCT_BUNDLE_IDENTIFIER = com.nebori92.macos.Glue;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};
 		954B564121B5014500BF56E1 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 794DB2BCF9C2CA78F26F8C3A /* Pods-GlueTests.debug.xcconfig */;
+			baseConfigurationReference = 87F7661B3A0FFFB0E5F3D5E5 /* Pods-GlueTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -651,7 +656,7 @@
 		};
 		954B564221B5014500BF56E1 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7D5FC082D1B2CD58E95F735D /* Pods-GlueTests.release.xcconfig */;
+			baseConfigurationReference = 8A3E5F8052BABE7B4B22CD71 /* Pods-GlueTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";

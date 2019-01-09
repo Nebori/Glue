@@ -60,7 +60,7 @@ class GlueViewController: NSViewController {
         updateAll()
     }
     @IBAction func quitButtonAction(_ sender: Any) {
-        exit(0)
+        NSApp.terminate(nil)
     }
     
     override func viewDidLoad() {
