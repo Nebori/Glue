@@ -31,33 +31,31 @@ class TestGlueConfigurationManager: XCTestCase {
     
     func testInitialConfigManager() {
         let config = configManager.config
-        assert(config.control == true || config.control == false)
-        assert(config.option == true || config.option == false)
-        assert(config.command == true || config.command == false)
+        XCTAssertTrue(config.control == true || config.control == false)
+        XCTAssertTrue(config.option == true || config.option == false)
+        XCTAssertTrue(config.command == true || config.command == false)
     }
     
     func testGetConfigOption() {
-        let expectationOriginFlags: NSEvent.ModifierFlags = [.control, .option, .command]
-        let expectationNumFlags: NSEvent.ModifierFlags = [.control, .option, .command, .numericPad, .function]
+        let expectationFlags: NSEvent.ModifierFlags = [.control, .option, .command, .numericPad, .function]
         
-        let (originFlags, numFlags) = configManager.getConfigOption()
+        let flags = configManager.getConfigOption()
      
-        assert(expectationOriginFlags == originFlags)
-        assert(expectationNumFlags == numFlags)
+        XCTAssertEqual(expectationFlags, flags)
     }
     
     func testGetUsage() {
         let expectationUsage: String = "⌃ ⌥ ⌘ "
         
         let usage = configManager.getUsage()
-        assert(expectationUsage == usage)
+        XCTAssertEqual(expectationUsage, usage)
     }
     
     func testGetOnCount() {
         let expectationCount: Int = 3
         
         let count = configManager.getOnCount()
-        assert(expectationCount == count)
+        XCTAssertEqual(expectationCount, count)
     }
     
     func testChangeConfig() {
@@ -71,9 +69,9 @@ class TestGlueConfigurationManager: XCTestCase {
         configManager.changeConfig(.command)
         let config = configManager.config
         
-        assert(expectationConfig.control == config.control)
-        assert(expectationConfig.option == config.option)
-        assert(expectationConfig.command == config.command)
+        XCTAssertEqual(expectationConfig.control, config.control)
+        XCTAssertEqual(expectationConfig.option, config.option)
+        XCTAssertEqual(expectationConfig.command, config.command)
     }
 
     func testExample() {

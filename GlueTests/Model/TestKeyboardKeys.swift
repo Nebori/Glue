@@ -22,19 +22,19 @@ class TestKeyboardKeys: XCTestCase {
     func testInitialKey() {
         let expectationKeys = KeyboardKeys.q
         let keys = KeyboardKey(.q)
-        assert(expectationKeys == keys.getKey())
+        XCTAssertEqual(expectationKeys, keys.getKey())
     }
     
     func testInitialStringKey() {
         let expectationStr = "q"
         let keys = KeyboardKey(.q)
-        assert(expectationStr == keys.getString())
+        XCTAssertEqual(expectationStr, keys.getString())
     }
     
     func testInitalUInt16Key() {
         let expectationUInt16 = 12
         let keys = KeyboardKey(.q)
-        assert(expectationUInt16 == keys.getUInt16())
+        XCTAssertEqual(expectationUInt16, Int(keys.getUInt()))
     }
 
     func testExample() {

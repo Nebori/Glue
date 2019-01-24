@@ -26,9 +26,9 @@ class TestGlueConfiguration: XCTestCase {
         let (expectationControl, expectationOption, expectationCommand) =
             (true, true, true)
         
-        assert(expectationControl == config.control)
-        assert(expectationOption == config.option)
-        assert(expectationCommand == config.command)
+        XCTAssertEqual(expectationControl, config.control)
+        XCTAssertEqual(expectationOption, config.option)
+        XCTAssertEqual(expectationCommand, config.command)
     }
     
     func testChangeConfig() {
@@ -38,9 +38,9 @@ class TestGlueConfiguration: XCTestCase {
         config.control = false
         config.option = false
         config.command = false
-        assert(expectationControl == config.control)
-        assert(expectationOption == config.option)
-        assert(expectationCommand == config.command)
+        XCTAssertEqual(expectationControl, config.control)
+        XCTAssertEqual(expectationOption, config.option)
+        XCTAssertEqual(expectationCommand, config.command)
     }
     
     func testChangeShortcut() {
@@ -54,9 +54,9 @@ class TestGlueConfiguration: XCTestCase {
         config.down = KeyboardKey.init(13)
         config.right = KeyboardKey.init(14)
         
-        assert(expectationUp == config.up.getString())
-        assert(expectationDown == config.down.getString())
-        assert(expectationRight == config.right.getString())
+        XCTAssertEqual(expectationUp, config.up.getString())
+        XCTAssertEqual(expectationDown, config.down.getString())
+        XCTAssertEqual(expectationRight, config.right.getString())
     }
 
     func testExample() {
